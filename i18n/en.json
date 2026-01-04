@@ -12,6 +12,11 @@
         "timeline": "Timeline",
         "table": "Table"
     },
+    "stats": {
+        "interventions": "interventions",
+        "countries": "countries",
+        "years": "years of data"
+    },
     "timeline": {
         "title": "Timeline",
         "expand": "View details",

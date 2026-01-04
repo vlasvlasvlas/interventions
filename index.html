@@ -6,7 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Base de datos histórica de intervenciones militares y políticas de Estados Unidos en el extranjero (1775-2026). Datos abiertos de Wikipedia.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Intervenciones de EEUU en el Extranjero">
+    <meta property="og:description"
+        content="Base de datos histórica de 318 intervenciones militares y políticas (1775-2026). Datos abiertos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vlasvlasvlas.github.io/interventions/">
+    <meta property="og:image" content="https://vlasvlasvlas.github.io/interventions/screenshot.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Intervenciones de EEUU en el Extranjero">
+    <meta name="twitter:description"
+        content="Base de datos histórica de 318 intervenciones militares y políticas (1775-2026).">
+
     <title>Intervenciones de EEUU en el Extranjero</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,7 +38,7 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-content">
-            <a href="/" class="logo">
+            <a href="./" class="logo">
                 <span class="logo-icon">🌍</span>
                 <span class="logo-text" data-i18n="title">Intervenciones de EEUU</span>
             </a>
@@ -60,15 +79,15 @@
             <div class="stats" id="stats">
                 <div class="stat">
                     <span class="stat-number" id="totalInterventions">0</span>
-                    <span class="stat-label">intervenciones</span>
+                    <span class="stat-label" data-i18n="stats.interventions">intervenciones</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number" id="totalCountries">0</span>
-                    <span class="stat-label">países</span>
+                    <span class="stat-label" data-i18n="stats.countries">países</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number" id="totalYears">0</span>
-                    <span class="stat-label">años de datos</span>
+                    <span class="stat-label" data-i18n="stats.years">años de datos</span>
                 </div>
             </div>
         </div>
@@ -94,7 +113,7 @@
                         <option value="">Todas las décadas</option>
                     </select>
                 </div>
-                <div class="timeline" id="timeline">
+                <div class="timeline" id="timeline" aria-live="polite">
                     <!-- Timeline items rendered by JS -->
                 </div>
                 <div class="timeline-pagination" id="timelinePagination">
@@ -126,7 +145,7 @@
                                 <th data-i18n="table.source">Fuente</th>
                             </tr>
                         </thead>
-                        <tbody id="tableBody">
+                        <tbody id="tableBody" aria-live="polite">
                             <!-- Rows rendered by JS -->
                         </tbody>
                     </table>
@@ -232,6 +251,13 @@
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .catch(err => console.log('SW registration failed:', err));
+        }
+    </script>
 </body>
 
 </html>
