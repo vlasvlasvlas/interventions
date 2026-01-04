@@ -29,7 +29,8 @@
     "country": "País/Lugar",
     "description": "Descripción",
     "source": "Fuente",
-    "viewSource": "Ver fuente"
+    "viewSource": "Ver fuente",
+    "continent": "Continente"
   },
   "pagination": {
     "showing": "Mostrando",
@@ -43,7 +44,8 @@
     "decade": "Década",
     "region": "Región",
     "all": "Todas",
-    "allCountries": "Todos los países"
+    "allCountries": "Todos los países",
+    "allContinents": "Todos los continentes"
   },
   "openData": {
     "title": "Open Data",

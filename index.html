@@ -127,7 +127,8 @@
                     <path d="M21 21l-4.35-4.35" />
                 </svg>
                 <input type="text" id="globalSearch" class="search-input" data-i18n-placeholder="search"
-                    placeholder="Buscar país, año o descripción..." aria-label="Buscar">
+                    placeholder="Buscar país, año o descripción..." aria-label="Buscar" autocomplete="off">
+                <div class="autosuggest" id="autosuggest" hidden></div>
             </div>
 
             <div class="stats" id="stats">
@@ -183,11 +184,11 @@
                     <select id="filterDecade" class="filter-select">
                         <option value="" data-i18n="filters.all">Todas</option>
                     </select>
+                    <select id="filterContinent" class="filter-select">
+                        <option value="" data-i18n="filters.allContinents">Todos los continentes</option>
+                    </select>
                     <select id="filterCountry" class="filter-select">
                         <option value="" data-i18n="filters.allCountries">Todos los países</option>
-                    </select>
-                    <select id="filterRegion" class="filter-select">
-                        <option value="" data-i18n="filters.all">Todas</option>
                     </select>
                 </div>
 
@@ -197,6 +198,7 @@
                             <tr>
                                 <th data-i18n="table.yearStart">Inicio</th>
                                 <th data-i18n="table.yearEnd">Fin</th>
+                                <th data-i18n="table.continent">Continente</th>
                                 <th data-i18n="table.country">País/Lugar</th>
                                 <th data-i18n="table.description">Descripción</th>
                                 <th data-i18n="table.source">Fuente</th>

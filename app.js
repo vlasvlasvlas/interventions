@@ -230,10 +230,16 @@ function initializeFilters() {
         filterDecade.innerHTML += `<option value="${d}">${d}</option>`;
     });
 
-    filterRegion.innerHTML = `<option value="">${t('filters.all')}</option>`;
-    sections.forEach(s => {
-        filterRegion.innerHTML += `<option value="${s}">${s}</option>`;
-    });
+    // Continent filter
+    const filterContinent = document.getElementById('filterContinent');
+    if (filterContinent) {
+        const continents = [...new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean))].sort();
+        filterContinent.innerHTML = `<option value="">${t('filters.allContinents') || 'Todos los continentes'}</option>`;
+        continents.forEach(c => {
+            filterContinent.innerHTML += `<option value="${c}">${c}</option>`;
+        });
+        filterContinent.addEventListener('change', applyFilters);
+    }
 
     // Country filter
     const filterCountry = document.getElementById('filterCountry');
@@ -252,7 +258,7 @@ function applyFilters() {
     const decade = currentTab === 'timeline'
         ? document.getElementById('timelineDecade').value
         : document.getElementById('filterDecade').value;
-    const section = document.getElementById('filterRegion').value;
+    const continentFilter = document.getElementById('filterContinent')?.value || '';
     const countryFilter = document.getElementById('filterCountry')?.value || '';
 
     filteredData = interventions.filter(item => {
@@ -272,9 +278,10 @@ function applyFilters() {
                 matchesSearch = searchYear >= item.year_start && searchYear <= item.year_end;
             }
 
-            // Also check country and description
+            // Also check country, description, and continent
             if (!matchesSearch) {
-                matchesSearch = country.includes(searchTerm) || desc.includes(searchTerm);
+                const continent = (item.continent?.[currentLang] || item.continent?.es || '').toLowerCase();
+                matchesSearch = country.includes(searchTerm) || desc.includes(searchTerm) || continent.includes(searchTerm);
             }
 
             // Also check exact year_start match for partial year searches
@@ -292,9 +299,12 @@ function applyFilters() {
             return false;
         }
 
-        // Section/Region filter
-        if (section && item.section !== section) {
-            return false;
+        // Continent filter
+        if (continentFilter) {
+            const itemContinent = item.continent?.[currentLang] || item.continent?.es || '';
+            if (itemContinent !== continentFilter) {
+                return false;
+            }
         }
 
         // Country filter
@@ -444,13 +454,14 @@ function renderTable() {
     const data = getPaginatedData();
 
     if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="no-results">${t('noResults')}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="no-results">${t('noResults')}</td></tr>`;
         return;
     }
 
     tbody.innerHTML = data.map(item => {
         const flag = getFlagEmoji(item.country?.code || getCountryCode(item.country?.[currentLang]));
         const country = item.country?.[currentLang] || item.country?.es || '-';
+        const continent = item.continent?.[currentLang] || item.continent?.es || 'Global';
         const desc = item.description?.[currentLang] || item.description?.es || '-';
         const source = item.source?.[currentLang] || item.source?.es || '#';
 
@@ -460,6 +471,7 @@ function renderTable() {
             <tr>
                 <td>${item.year_start}</td>
                 <td>${item.year_end}</td>
+                <td><span class="continent-badge">${continent}</span></td>
                 <td>
                     <div class="table-country">
                         <span class="table-flag">${flag}</span>
@@ -619,11 +631,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Language toggle
     document.getElementById('langToggle').addEventListener('click', toggleLanguage);
 
-    // Global search
+    // Global search with autosuggest
+    const searchInput = document.getElementById('globalSearch');
+    const autosuggestDiv = document.getElementById('autosuggest');
     let searchTimeout;
-    document.getElementById('globalSearch').addEventListener('input', () => {
+
+    searchInput.addEventListener('input', () => {
         clearTimeout(searchTimeout);
+        const term = searchInput.value.toLowerCase().trim();
+
+        // Show autosuggest only for text (not years)
+        if (term.length >= 2 && !/^\d+$/.test(term)) {
+            showAutosuggest(term);
+        } else {
+            hideAutosuggest();
+        }
+
         searchTimeout = setTimeout(applyFilters, 300);
+    });
+
+    // Hide autosuggest on blur (with delay for click)
+    searchInput.addEventListener('blur', () => {
+        setTimeout(hideAutosuggest, 200);
+    });
+
+    // Show again on focus if there's text
+    searchInput.addEventListener('focus', () => {
+        const term = searchInput.value.toLowerCase().trim();
+        if (term.length >= 2 && !/^\d+$/.test(term)) {
+            showAutosuggest(term);
+        }
     });
 
     // Timeline decade filter
@@ -631,9 +668,75 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Table filters
     document.getElementById('filterDecade').addEventListener('change', applyFilters);
-    document.getElementById('filterRegion').addEventListener('change', applyFilters);
 
     // Download buttons
     document.getElementById('downloadCSV').addEventListener('click', downloadCSV);
     document.getElementById('downloadJSON').addEventListener('click', downloadJSON);
 });
+
+// ================================
+// Autosuggest
+// ================================
+
+function showAutosuggest(term) {
+    const autosuggestDiv = document.getElementById('autosuggest');
+
+    // Get unique countries and continents
+    const countries = [...new Set(interventions.map(i => i.country?.[currentLang] || i.country?.es).filter(Boolean))];
+    const continents = [...new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean))];
+
+    // Filter matching
+    const matchingContinents = continents.filter(c => c.toLowerCase().includes(term)).slice(0, 3);
+    const matchingCountries = countries.filter(c => c.toLowerCase().includes(term)).slice(0, 7);
+
+    if (matchingContinents.length === 0 && matchingCountries.length === 0) {
+        hideAutosuggest();
+        return;
+    }
+
+    let html = '';
+
+    // Continents first
+    matchingContinents.forEach(c => {
+        html += `<div class="autosuggest-item" data-value="${c}">
+            <span class="type">🌍</span>
+            <span class="name">${highlightMatch(c, term)}</span>
+        </div>`;
+    });
+
+    // Then countries
+    matchingCountries.forEach(c => {
+        const code = getCountryCode(c);
+        const flag = getFlagEmoji(code);
+        html += `<div class="autosuggest-item" data-value="${c}">
+            <span class="type">${flag}</span>
+            <span class="name">${highlightMatch(c, term)}</span>
+        </div>`;
+    });
+
+    autosuggestDiv.innerHTML = html;
+    autosuggestDiv.hidden = false;
+
+    // Add click handlers
+    autosuggestDiv.querySelectorAll('.autosuggest-item').forEach(item => {
+        item.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            const value = item.dataset.value;
+            document.getElementById('globalSearch').value = value;
+            hideAutosuggest();
+            applyFilters();
+        });
+    });
+}
+
+function hideAutosuggest() {
+    const autosuggestDiv = document.getElementById('autosuggest');
+    if (autosuggestDiv) {
+        autosuggestDiv.hidden = true;
+    }
+}
+
+function highlightMatch(text, term) {
+    const regex = new RegExp(`(${term})`, 'gi');
+    return text.replace(regex, '<strong style="color: var(--accent);">$1</strong>');
+}
