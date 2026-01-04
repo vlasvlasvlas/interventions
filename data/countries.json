@@ -2,16 +2,24 @@
   "countries": [
     {
       "code": "AE",
-      "iso3": null,
+      "iso3": "ARE",
       "name_en": "United Arab Emirates",
-      "name_es": "United Arab Emirates",
+      "name_es": "Emiratos Árabes Unidos",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1971,
+      "source_independence": "UN-1971",
+      "regime_series": [
+        {
+          "year_start": 1971,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 15.6730945329946,
@@ -48,20 +56,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/AE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/AE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/AE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "AF",
-      "iso3": null,
+      "iso3": "AFG",
       "name_en": "Afghanistan",
-      "name_es": "Afghanistan",
+      "name_es": "Afganistán",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1919,
+      "source_independence": "UN-1946",
+      "regime_series": [
+        {
+          "year_start": 1973,
+          "year_end": 1978,
+          "regime_family": "hybrid",
+          "score": -2,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1978,
+          "year_end": 1992,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2001,
+          "year_end": 2021,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2021,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0178695056581909,
@@ -98,20 +137,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/AF/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/AF/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/AF/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "AL",
-      "iso3": null,
+      "iso3": "ALB",
       "name_en": "Albania",
       "name_es": "Albania",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "Europe & Central Asia (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1912,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1991,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 1.04218369204761,
@@ -148,20 +197,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/AL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/AL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/AL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "AO",
-      "iso3": null,
+      "iso3": "AGO",
       "name_en": "Angola",
       "name_es": "Angola",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1975,
+      "source_independence": "UN-1976",
+      "regime_series": [
+        {
+          "year_start": 1975,
+          "year_end": 2002,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2002,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -2,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 28.2744398825844,
@@ -198,20 +264,58 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/AO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/AO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/AO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "AR",
-      "iso3": null,
+      "iso3": "ARG",
       "name_en": "Argentina",
       "name_es": "Argentina",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1816,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1930,
+          "year_end": 1946,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1946,
+          "year_end": 1955,
+          "regime_family": "hybrid",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1955,
+          "year_end": 1973,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1976,
+          "year_end": 1983,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1983,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 1.54438228879011,
@@ -248,20 +352,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/AR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/AR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/AR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "BA",
-      "iso3": null,
+      "iso3": "BIH",
       "name_en": "Bosnia and Herzegovina",
-      "name_es": "Bosnia and Herzegovina",
+      "name_es": "Bosnia y Herzegovina",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "Europe & Central Asia (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1992,
+      "source_independence": "UN-1992",
+      "regime_series": [
+        {
+          "year_start": 1995,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -298,20 +412,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/BA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/BA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/BA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "BO",
-      "iso3": null,
+      "iso3": "BOL",
       "name_en": "Bolivia",
       "name_es": "Bolivia",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1825,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1964,
+          "year_end": 1982,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1982,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 1.26335187425347,
@@ -348,20 +479,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/BO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/BO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/BO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "BR",
-      "iso3": null,
+      "iso3": "BRA",
       "name_en": "Brazil",
-      "name_es": "Brazil",
+      "name_es": "Brasil",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1822,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1930,
+          "year_end": 1945,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1945,
+          "year_end": 1964,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1964,
+          "year_end": 1985,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1985,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 2.60445733698427,
@@ -398,20 +560,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/BR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CA",
-      "iso3": null,
+      "iso3": "CAN",
       "name_en": "Canada",
-      "name_es": "Canada",
+      "name_es": "Canadá",
       "region_wb": "North America",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1867,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1867,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 2.82978528865474,
@@ -448,20 +620,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Norteamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CD",
-      "iso3": null,
+      "iso3": "COD",
       "name_en": "Congo, Dem. Rep.",
-      "name_es": "Congo, Dem. Rep.",
+      "name_es": "República Democrática del Congo",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1960,
+      "source_independence": "UN-1960",
+      "regime_series": [
+        {
+          "year_start": 1960,
+          "year_end": 1965,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1965,
+          "year_end": 1997,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1997,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.649836903019219,
@@ -498,20 +694,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CD/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CD/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CD/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CL",
-      "iso3": null,
+      "iso3": "CHL",
       "name_en": "Chile",
       "name_es": "Chile",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1818,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1925,
+          "year_end": 1973,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1973,
+          "year_end": 1990,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1990,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0126983242549898,
@@ -548,20 +768,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CN",
-      "iso3": null,
+      "iso3": "CHN",
       "name_en": "China",
       "name_es": "China",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1949,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1949,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.308578757061099,
@@ -598,20 +828,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CN/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CN/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CN/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CO",
-      "iso3": null,
+      "iso3": "COL",
       "name_en": "Colombia",
       "name_es": "Colombia",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1810,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1958,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 3.42402487593374,
@@ -648,20 +888,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "CU",
-      "iso3": null,
+      "iso3": "CUB",
       "name_en": "Cuba",
       "name_es": "Cuba",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1902,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1959,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.222499890127649,
@@ -698,20 +948,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CU/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CU/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CU/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "DE",
-      "iso3": null,
+      "iso3": "DEU",
       "name_en": "Germany",
-      "name_es": "Germany",
+      "name_es": "Alemania",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1949,
+      "source_independence": "UN-1973",
+      "regime_series": [
+        {
+          "year_start": 1949,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0140349033815617,
@@ -748,20 +1008,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "DJ",
-      "iso3": null,
+      "iso3": "DJI",
       "name_en": "Djibouti",
-      "name_es": "Djibouti",
+      "name_es": "Yibuti",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1977,
+      "source_independence": "UN-1977",
+      "regime_series": [
+        {
+          "year_start": 1977,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -798,20 +1068,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/DJ/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/DJ/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/DJ/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "DO",
-      "iso3": null,
+      "iso3": "DOM",
       "name_en": "Dominican Republic",
-      "name_es": "Dominican Republic",
+      "name_es": "República Dominicana",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1844,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1930,
+          "year_end": 1961,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1961,
+          "year_end": 1966,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1966,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -848,20 +1142,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/DO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/DO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/DO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "DZ",
-      "iso3": null,
+      "iso3": "DZA",
       "name_en": "Algeria",
-      "name_es": "Algeria",
+      "name_es": "Argelia",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1962,
+      "source_independence": "UN-1962",
+      "regime_series": [
+        {
+          "year_start": 1962,
+          "year_end": 1992,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1992,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -2,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 14.4615654623053,
@@ -898,20 +1209,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/DZ/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/DZ/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/DZ/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "EG",
-      "iso3": null,
+      "iso3": "EGY",
       "name_en": "Egypt, Arab Rep.",
-      "name_es": "Egypt, Arab Rep.",
+      "name_es": "Egipto",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1922,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1952,
+          "year_end": 2011,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2011,
+          "year_end": 2013,
+          "regime_family": "hybrid",
+          "score": 1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2013,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 2.98581458250197,
@@ -948,20 +1283,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/EG/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/EG/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/EG/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "ET",
-      "iso3": null,
+      "iso3": "ETH",
       "name_en": "Ethiopia",
-      "name_es": "Ethiopia",
+      "name_es": "Etiopía",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "",
       "income_level_wb": "Not classified",
       "lending_type_wb": "IDA",
       "independence_year": null,
       "source_independence": null,
-      "regime_series": [],
+      "regime_series": [
+        {
+          "year_start": 1974,
+          "year_end": 1991,
+          "regime_family": "autocracy",
+          "score": -8,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1991,
+          "year_end": 2018,
+          "regime_family": "hybrid",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2018,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -998,20 +1357,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/ET/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/ET/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/ET/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "FJ",
-      "iso3": null,
+      "iso3": "FJI",
       "name_en": "Fiji",
-      "name_es": "Fiji",
+      "name_es": "Fiyi",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1970,
+      "source_independence": "UN-1970",
+      "regime_series": [
+        {
+          "year_start": 1970,
+          "year_end": 2006,
+          "regime_family": "democracy",
+          "score": 6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2006,
+          "year_end": 2014,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2014,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 6,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -1048,13 +1431,15 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/FJ/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/FJ/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/FJ/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Oceanía",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "FK",
-      "iso3": null,
+      "iso3": "FLK",
       "name_en": null,
-      "name_es": null,
+      "name_es": "Islas Malvinas",
       "region_wb": null,
       "admin_region_wb": null,
       "income_level_wb": null,
@@ -1098,20 +1483,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/FK/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/FK/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/FK/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "GD",
-      "iso3": null,
+      "iso3": "GRD",
       "name_en": "Grenada",
-      "name_es": "Grenada",
+      "name_es": "Granada",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1974,
+      "source_independence": "UN-1974",
+      "regime_series": [
+        {
+          "year_start": 1974,
+          "year_end": 1983,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1983,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -1148,13 +1550,15 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/GD/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/GD/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/GD/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "GL",
-      "iso3": null,
+      "iso3": "GRL",
       "name_en": "Greenland",
-      "name_es": "Greenland",
+      "name_es": "Groenlandia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
@@ -1198,20 +1602,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/GL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/GL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/GL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Norteamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "GR",
-      "iso3": null,
+      "iso3": "GRC",
       "name_en": "Greece",
-      "name_es": "Greece",
+      "name_es": "Grecia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1967,
+          "year_end": 1974,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1974,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0116928580271195,
@@ -1248,20 +1669,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/GR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/GR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/GR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "GT",
-      "iso3": null,
+      "iso3": "GTM",
       "name_en": "Guatemala",
       "name_es": "Guatemala",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1954,
+          "year_end": 1986,
+          "regime_family": "autocracy",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1986,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.118140036355359,
@@ -1298,20 +1736,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/GT/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/GT/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/GT/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "HN",
-      "iso3": null,
+      "iso3": "HND",
       "name_en": "Honduras",
       "name_es": "Honduras",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1963,
+          "year_end": 1982,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1982,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.00101153040386899,
@@ -1348,20 +1803,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/HN/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/HN/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/HN/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "HR",
-      "iso3": null,
+      "iso3": "HRV",
       "name_en": "Croatia",
-      "name_es": "Croatia",
+      "name_es": "Croacia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1991,
+      "source_independence": "UN-1992",
+      "regime_series": [
+        {
+          "year_start": 1991,
+          "year_end": 2000,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2000,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.280358036189526,
@@ -1398,20 +1870,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/HR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/HR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/HR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "HT",
-      "iso3": null,
+      "iso3": "HTI",
       "name_en": "Haiti",
-      "name_es": "Haiti",
+      "name_es": "Haití",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1804,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1957,
+          "year_end": 1986,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1986,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 2,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -1448,20 +1937,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/HT/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/HT/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/HT/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "ID",
-      "iso3": null,
+      "iso3": "IDN",
       "name_en": "Indonesia",
       "name_es": "Indonesia",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1945,
+      "source_independence": "UN-1950",
+      "regime_series": [
+        {
+          "year_start": 1945,
+          "year_end": 1965,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1965,
+          "year_end": 1998,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1998,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.766028339629635,
@@ -1498,20 +2011,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/ID/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/ID/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/ID/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "IL",
-      "iso3": null,
+      "iso3": "ISR",
       "name_en": "Israel",
       "name_es": "Israel",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1948,
+      "source_independence": "UN-1949",
+      "regime_series": [
+        {
+          "year_start": 1948,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0115224616168168,
@@ -1548,20 +2071,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/IL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/IL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/IL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "IQ",
-      "iso3": null,
+      "iso3": "IRQ",
       "name_en": "Iraq",
-      "name_es": "Iraq",
+      "name_es": "Irak",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1932,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1958,
+          "year_end": 2003,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2003,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 3,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 42.7870984915076,
@@ -1598,20 +2138,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/IQ/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/IQ/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/IQ/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "IR",
-      "iso3": null,
+      "iso3": "IRN",
       "name_en": "Iran, Islamic Rep.",
-      "name_es": "Iran, Islamic Rep.",
+      "name_es": "Irán",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
       "independence_year": null,
       "source_independence": null,
-      "regime_series": [],
+      "regime_series": [
+        {
+          "year_start": 1953,
+          "year_end": 1979,
+          "regime_family": "autocracy",
+          "score": -10,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1979,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 18.2658980929233,
@@ -1648,20 +2205,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/IR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/IR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/IR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "IS",
-      "iso3": null,
+      "iso3": "ISL",
       "name_en": "Iceland",
-      "name_es": "Iceland",
+      "name_es": "Islandia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1944,
+      "source_independence": "UN-1946",
+      "regime_series": [
+        {
+          "year_start": 1944,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -1698,20 +2265,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/IS/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/IS/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/IS/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "IT",
-      "iso3": null,
+      "iso3": "ITA",
       "name_en": "Italy",
-      "name_es": "Italy",
+      "name_es": "Italia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1861,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1946,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.077005203060734,
@@ -1748,20 +2325,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/IT/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/IT/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/IT/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "JM",
-      "iso3": null,
+      "iso3": "JAM",
       "name_en": "Jamaica",
       "name_es": "Jamaica",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1962,
+      "source_independence": "UN-1962",
+      "regime_series": [
+        {
+          "year_start": 1962,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.294903461359937,
@@ -1798,20 +2385,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/JM/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/JM/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/JM/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "JO",
-      "iso3": null,
+      "iso3": "JOR",
       "name_en": "Jordan",
-      "name_es": "Jordan",
+      "name_es": "Jordania",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1946,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1946,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0143633135367042,
@@ -1848,20 +2445,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/JO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/JO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/JO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "JP",
-      "iso3": null,
+      "iso3": "JPN",
       "name_en": "Japan",
-      "name_es": "Japan",
+      "name_es": "Japón",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
       "independence_year": null,
       "source_independence": null,
-      "regime_series": [],
+      "regime_series": [
+        {
+          "year_start": 1945,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.00223132111964285,
@@ -1898,20 +2505,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/JP/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/JP/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/JP/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "KE",
-      "iso3": null,
+      "iso3": "KEN",
       "name_en": "Kenya",
-      "name_es": "Kenya",
+      "name_es": "Kenia",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1963,
+      "source_independence": "UN-1963",
+      "regime_series": [
+        {
+          "year_start": 1963,
+          "year_end": 2002,
+          "regime_family": "hybrid",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2002,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -1948,20 +2572,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "KH",
-      "iso3": null,
+      "iso3": "KHM",
       "name_en": "Cambodia",
-      "name_es": "Cambodia",
+      "name_es": "Camboya",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1953,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1953,
+          "year_end": 1970,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1975,
+          "year_end": 1979,
+          "regime_family": "autocracy",
+          "score": -10,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1979,
+          "year_end": 1993,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1993,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0410317572268778,
@@ -1998,20 +2653,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KH/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KH/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KH/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "KR",
-      "iso3": null,
+      "iso3": "KOR",
       "name_en": "Korea, Rep.",
-      "name_es": "Korea, Rep.",
+      "name_es": "Corea del Sur",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1948,
+      "source_independence": "UN-1991",
+      "regime_series": [
+        {
+          "year_start": 1948,
+          "year_end": 1987,
+          "regime_family": "hybrid",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1987,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0283124162355571,
@@ -2048,20 +2720,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "KW",
-      "iso3": null,
+      "iso3": "KWT",
       "name_en": "Kuwait",
       "name_es": "Kuwait",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1961,
+      "source_independence": "UN-1963",
+      "regime_series": [
+        {
+          "year_start": 1961,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 27.5816891390019,
@@ -2098,20 +2780,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KW/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KW/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KW/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "LA",
-      "iso3": null,
+      "iso3": "LAO",
       "name_en": "Lao PDR",
-      "name_es": "Lao PDR",
+      "name_es": "Laos",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1954,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1975,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -2148,20 +2840,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/LA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/LA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/LA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "LB",
-      "iso3": null,
+      "iso3": "LBN",
       "name_en": "Lebanon",
-      "name_es": "Lebanon",
+      "name_es": "Líbano",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1943,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1943,
+          "year_end": 1975,
+          "regime_family": "democracy",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1975,
+          "year_end": 1990,
+          "regime_family": "hybrid",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1990,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 2,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -2198,20 +2914,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/LB/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/LB/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/LB/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "LR",
-      "iso3": null,
+      "iso3": "LBR",
       "name_en": "Liberia",
       "name_es": "Liberia",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1847,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1847,
+          "year_end": 1980,
+          "regime_family": "hybrid",
+          "score": 2,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1980,
+          "year_end": 1997,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1997,
+          "year_end": 2003,
+          "regime_family": "hybrid",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2003,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 6,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -2248,20 +2995,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/LR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/LR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/LR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "LY",
-      "iso3": null,
+      "iso3": "LBY",
       "name_en": "Libya",
-      "name_es": "Libya",
+      "name_es": "Libia",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1951,
+      "source_independence": "UN-1955",
+      "regime_series": [
+        {
+          "year_start": 1969,
+          "year_end": 2011,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2011,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 56.3779371892049,
@@ -2298,20 +3062,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/LY/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/LY/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/LY/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "MA",
-      "iso3": null,
+      "iso3": "MAR",
       "name_en": "Morocco",
-      "name_es": "Morocco",
+      "name_es": "Marruecos",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1956,
+      "source_independence": "UN-1956",
+      "regime_series": [
+        {
+          "year_start": 1956,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.00101118511153249,
@@ -2348,20 +3122,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/MA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/MA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/MA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "MK",
-      "iso3": null,
+      "iso3": "MKD",
       "name_en": "North Macedonia",
-      "name_es": "North Macedonia",
+      "name_es": "Macedonia del Norte",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "Europe & Central Asia (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1991,
+      "source_independence": "UN-1993",
+      "regime_series": [
+        {
+          "year_start": 1991,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -2398,20 +3182,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/MK/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/MK/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/MK/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "MX",
-      "iso3": null,
+      "iso3": "MEX",
       "name_en": "Mexico",
-      "name_es": "Mexico",
+      "name_es": "México",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1917,
+          "year_end": 2000,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2000,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 2.06594374719816,
@@ -2448,20 +3249,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/MX/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/MX/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/MX/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "NG",
-      "iso3": null,
+      "iso3": "NGA",
       "name_en": "Nigeria",
       "name_es": "Nigeria",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1960,
+      "source_independence": "UN-1960",
+      "regime_series": [
+        {
+          "year_start": 1960,
+          "year_end": 1999,
+          "regime_family": "hybrid",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1999,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 6.24674969005013,
@@ -2498,20 +3316,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/NG/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/NG/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/NG/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "NI",
-      "iso3": null,
+      "iso3": "NIC",
       "name_en": "Nicaragua",
       "name_es": "Nicaragua",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1936,
+          "year_end": 1979,
+          "regime_family": "autocracy",
+          "score": -8,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1979,
+          "year_end": 1990,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1990,
+          "year_end": 2006,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2006,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0205645534300319,
@@ -2548,20 +3397,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/NI/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/NI/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/NI/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PA",
-      "iso3": null,
+      "iso3": "PAN",
       "name_en": "Panama",
-      "name_es": "Panama",
+      "name_es": "Panamá",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1903,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1968,
+          "year_end": 1989,
+          "regime_family": "autocracy",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1989,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -2598,20 +3464,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PE",
-      "iso3": null,
+      "iso3": "PER",
       "name_en": "Peru",
-      "name_es": "Peru",
+      "name_es": "Perú",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1968,
+          "year_end": 1980,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1980,
+          "year_end": 1992,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1992,
+          "year_end": 2000,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2000,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.249104440244954,
@@ -2648,20 +3545,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PH",
-      "iso3": null,
+      "iso3": "PHL",
       "name_en": "Philippines",
-      "name_es": "Philippines",
+      "name_es": "Filipinas",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1946,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1946,
+          "year_end": 1972,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1972,
+          "year_end": 1986,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1986,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0341868982411901,
@@ -2698,20 +3619,72 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PH/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PH/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PH/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PK",
-      "iso3": null,
+      "iso3": "PAK",
       "name_en": "Pakistan",
-      "name_es": "Pakistan",
+      "name_es": "Pakistán",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1947,
+      "source_independence": "UN-1947",
+      "regime_series": [
+        {
+          "year_start": 1947,
+          "year_end": 1958,
+          "regime_family": "hybrid",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1958,
+          "year_end": 1971,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1971,
+          "year_end": 1977,
+          "regime_family": "democracy",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1977,
+          "year_end": 1988,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1988,
+          "year_end": 1999,
+          "regime_family": "hybrid",
+          "score": 0,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1999,
+          "year_end": 2008,
+          "regime_family": "autocracy",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2008,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.380197434318265,
@@ -2748,13 +3721,15 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PK/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PK/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PK/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PR",
-      "iso3": null,
+      "iso3": "PRI",
       "name_en": "Puerto Rico (US)",
-      "name_es": "Puerto Rico (US)",
+      "name_es": "Puerto Rico",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "",
       "income_level_wb": "High income",
@@ -2798,20 +3773,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "PY",
-      "iso3": null,
+      "iso3": "PRY",
       "name_en": "Paraguay",
       "name_es": "Paraguay",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1811,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1954,
+          "year_end": 1989,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1989,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.0729632593043703,
@@ -2848,20 +3840,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PY/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PY/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PY/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "RS",
-      "iso3": null,
+      "iso3": "SRB",
       "name_en": "Serbia",
       "name_es": "Serbia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "Europe & Central Asia (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 2006,
+      "source_independence": "UN-2000",
+      "regime_series": [
+        {
+          "year_start": 2000,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.42442078759101,
@@ -2898,20 +3900,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/RS/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/RS/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/RS/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "RU",
-      "iso3": null,
+      "iso3": "RUS",
       "name_en": "Russian Federation",
-      "name_es": "Russian Federation",
+      "name_es": "Rusia",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1991,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1991,
+          "year_end": 2000,
+          "regime_family": "hybrid",
+          "score": 3,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2000,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 9.67159402978612,
@@ -2948,20 +3967,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/RU/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/RU/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/RU/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "SA",
-      "iso3": null,
+      "iso3": "SAU",
       "name_en": "Saudi Arabia",
-      "name_es": "Saudi Arabia",
+      "name_es": "Arabia Saudita",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1932,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1932,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 23.6862940574499,
@@ -2998,20 +4027,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SA/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SA/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SA/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "SL",
-      "iso3": null,
+      "iso3": "SLE",
       "name_en": "Sierra Leone",
-      "name_es": "Sierra Leone",
+      "name_es": "Sierra Leona",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1961,
+      "source_independence": "UN-1961",
+      "regime_series": [
+        {
+          "year_start": 1961,
+          "year_end": 1991,
+          "regime_family": "hybrid",
+          "score": -2,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1991,
+          "year_end": 2002,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2002,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -3048,20 +4101,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "SO",
-      "iso3": null,
+      "iso3": "SOM",
       "name_en": "Somalia, Fed. Rep.",
-      "name_es": "Somalia, Fed. Rep.",
+      "name_es": "Somalia",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1960,
+      "source_independence": "UN-1960",
+      "regime_series": [
+        {
+          "year_start": 1960,
+          "year_end": 1969,
+          "regime_family": "democracy",
+          "score": 2,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1969,
+          "year_end": 1991,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1991,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -3098,20 +4175,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SO/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SO/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SO/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "SV",
-      "iso3": null,
+      "iso3": "SLV",
       "name_en": "El Salvador",
       "name_es": "El Salvador",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "Latin America & Caribbean (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1821,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1931,
+          "year_end": 1979,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1979,
+          "year_end": 1992,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1992,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.000150418698822045,
@@ -3148,20 +4249,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SV/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SV/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SV/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Centroamérica y Caribe",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "SY",
-      "iso3": null,
+      "iso3": "SYR",
       "name_en": "Syrian Arab Republic",
-      "name_es": "Syrian Arab Republic",
+      "name_es": "Siria",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1946,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1963,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 4.01504490668102,
@@ -3198,20 +4309,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SY/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SY/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SY/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "TD",
-      "iso3": null,
+      "iso3": "TCD",
       "name_en": "Chad",
       "name_es": "Chad",
       "region_wb": "Sub-Saharan Africa ",
       "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1960,
+      "source_independence": "UN-1960",
+      "regime_series": [
+        {
+          "year_start": 1960,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -6,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 16.7515661611417,
@@ -3248,20 +4369,44 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/TD/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/TD/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/TD/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "África",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "TH",
-      "iso3": null,
+      "iso3": "THA",
       "name_en": "Thailand",
-      "name_es": "Thailand",
+      "name_es": "Tailandia",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
       "independence_year": null,
       "source_independence": null,
-      "regime_series": [],
+      "regime_series": [
+        {
+          "year_start": 1945,
+          "year_end": 2014,
+          "regime_family": "hybrid",
+          "score": 2,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2014,
+          "year_end": 2019,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2019,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -1,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.481657874747012,
@@ -3298,20 +4443,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/TH/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/TH/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/TH/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "TL",
-      "iso3": null,
+      "iso3": "TLS",
       "name_en": "Timor-Leste",
-      "name_es": "Timor-Leste",
+      "name_es": "Timor Oriental",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "Blend",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 2002,
+      "source_independence": "UN-2002",
+      "regime_series": [
+        {
+          "year_start": 2002,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 5.29715520859989,
@@ -3348,20 +4503,51 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/TL/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/TL/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/TL/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "TR",
-      "iso3": null,
+      "iso3": "TUR",
       "name_en": "Turkiye",
-      "name_es": "Turkiye",
+      "name_es": "Turquía",
       "region_wb": "Europe & Central Asia",
       "admin_region_wb": "Europe & Central Asia (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1923,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1950,
+          "year_end": 1980,
+          "regime_family": "hybrid",
+          "score": 5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1980,
+          "year_end": 1983,
+          "regime_family": "autocracy",
+          "score": -5,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1983,
+          "year_end": 2016,
+          "regime_family": "hybrid",
+          "score": 4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2016,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.13797082409881,
@@ -3398,20 +4584,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/TR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/TR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/TR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Europa",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "TW",
-      "iso3": null,
+      "iso3": "TWN",
       "name_en": null,
-      "name_es": null,
+      "name_es": "Taiwán",
       "region_wb": null,
       "admin_region_wb": null,
       "income_level_wb": null,
       "lending_type_wb": null,
       "independence_year": null,
       "source_independence": null,
-      "regime_series": [],
+      "regime_series": [
+        {
+          "year_start": 1949,
+          "year_end": 1987,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1987,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": null,
@@ -3448,20 +4651,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/TW/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/TW/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/TW/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "US",
-      "iso3": null,
+      "iso3": "USA",
       "name_en": "United States",
-      "name_es": "United States",
+      "name_es": "Estados Unidos",
       "region_wb": "North America",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "Not classified",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1776,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1776,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.61148265568772,
@@ -3498,20 +4711,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Norteamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "UY",
-      "iso3": null,
+      "iso3": "URY",
       "name_en": "Uruguay",
       "name_es": "Uruguay",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "",
       "income_level_wb": "High income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1825,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1973,
+          "year_end": 1984,
+          "regime_family": "autocracy",
+          "score": -9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1984,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 10,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.00971591519832361,
@@ -3548,20 +4778,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/UY/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/UY/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/UY/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "VE",
-      "iso3": null,
+      "iso3": "VEN",
       "name_en": "Venezuela, RB",
-      "name_es": "Venezuela, RB",
+      "name_es": "Venezuela",
       "region_wb": "Latin America & Caribbean ",
       "admin_region_wb": "",
       "income_level_wb": "Not classified",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1811,
+      "source_independence": "UN-1945",
+      "regime_series": [
+        {
+          "year_start": 1958,
+          "year_end": 1999,
+          "regime_family": "democracy",
+          "score": 9,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1999,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -3,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 11.3021511747501,
@@ -3598,20 +4845,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/VE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/VE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/VE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Sudamérica",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "VN",
-      "iso3": null,
+      "iso3": "VNM",
       "name_en": "Viet Nam",
-      "name_es": "Viet Nam",
+      "name_es": "Vietnam",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Lower middle income",
       "lending_type_wb": "IBRD",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1945,
+      "source_independence": "UN-1977",
+      "regime_series": [
+        {
+          "year_start": 1945,
+          "year_end": 1954,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 1975,
+          "year_end": 2024,
+          "regime_family": "autocracy",
+          "score": -7,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0.669314214664457,
@@ -3648,20 +4912,30 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/VN/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/VN/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/VN/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Asia",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "WS",
-      "iso3": null,
+      "iso3": "WSM",
       "name_en": "Samoa",
       "name_es": "Samoa",
       "region_wb": "East Asia & Pacific",
       "admin_region_wb": "East Asia & Pacific (excluding high income)",
       "income_level_wb": "Upper middle income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1962,
+      "source_independence": "UN-1976",
+      "regime_series": [
+        {
+          "year_start": 1962,
+          "year_end": 2024,
+          "regime_family": "democracy",
+          "score": 8,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 0,
@@ -3698,20 +4972,37 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/WS/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/WS/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/WS/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Oceanía",
+      "source_name_es": "ISO-CLDR"
     },
     {
       "code": "YE",
-      "iso3": null,
+      "iso3": "YEM",
       "name_en": "Yemen, Rep.",
-      "name_es": "Yemen, Rep.",
+      "name_es": "Yemen",
       "region_wb": "Middle East, North Africa, Afghanistan & Pakistan",
       "admin_region_wb": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
       "income_level_wb": "Low income",
       "lending_type_wb": "IDA",
-      "independence_year": null,
-      "source_independence": null,
-      "regime_series": [],
+      "independence_year": 1967,
+      "source_independence": "UN-1947",
+      "regime_series": [
+        {
+          "year_start": 1990,
+          "year_end": 2011,
+          "regime_family": "autocracy",
+          "score": -4,
+          "source": "Polity5/V-Dem (approximation)"
+        },
+        {
+          "year_start": 2011,
+          "year_end": 2024,
+          "regime_family": "hybrid",
+          "score": -2,
+          "source": "Polity5/V-Dem (approximation)"
+        }
+      ],
       "resources": {
         "oil_rents_pct_gdp": {
           "value": 4.82356153067882,
@@ -3748,7 +5039,9 @@
         "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/YE/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
         "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/YE/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
         "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/YE/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      }
+      },
+      "continent_ui": "Medio Oriente",
+      "source_name_es": "ISO-CLDR"
     }
   ],
   "retrieved_at": "2026-01-04T20:26:39.496962Z",
