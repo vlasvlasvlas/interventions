@@ -699,6 +699,106 @@
       "source_name_es": "ISO-CLDR"
     },
     {
+      "code": "CF",
+      "iso3": "CAF",
+      "name_en": "Central African Republic",
+      "name_es": "Central African Republic",
+      "region_wb": "Sub-Saharan Africa ",
+      "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
+      "income_level_wb": "Low income",
+      "lending_type_wb": "IDA",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 1111.21941638883,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/CF?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/CF/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/CF/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/CF/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CF/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CF/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CF/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
+      "code": "CI",
+      "iso3": "CIV",
+      "name_en": "Cote d'Ivoire",
+      "name_es": "Cote d'Ivoire",
+      "region_wb": "Sub-Saharan Africa ",
+      "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
+      "income_level_wb": "Lower middle income",
+      "lending_type_wb": "Blend",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 6747.03796777388,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/CI?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/CI/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/CI/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/CI/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CI/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CI/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CI/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
       "code": "CL",
       "iso3": "CHL",
       "name_en": "Chile",
@@ -951,6 +1051,56 @@
       },
       "continent_ui": "Centroamérica y Caribe",
       "source_name_es": "ISO-CLDR"
+    },
+    {
+      "code": "CY",
+      "iso3": "CYP",
+      "name_en": "Cyprus",
+      "name_es": "Cyprus",
+      "region_wb": "Europe & Central Asia",
+      "admin_region_wb": "",
+      "income_level_wb": "High income",
+      "lending_type_wb": "Not classified",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 52635.4765625,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/CY?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/CY/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/CY/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/CY/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/CY/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/CY/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/CY/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
     },
     {
       "code": "DE",
@@ -2658,6 +2808,106 @@
       "source_name_es": "ISO-CLDR"
     },
     {
+      "code": "KI",
+      "iso3": "KIR",
+      "name_en": "Kiribati",
+      "name_es": "Kiribati",
+      "region_wb": "East Asia & Pacific",
+      "admin_region_wb": "East Asia & Pacific (excluding high income)",
+      "income_level_wb": "Lower middle income",
+      "lending_type_wb": "IDA",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 3257.1362912531,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/KI?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/KI/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/KI/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/KI/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KI/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KI/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KI/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
+      "code": "KM",
+      "iso3": "COM",
+      "name_en": "Comoros",
+      "name_es": "Comoros",
+      "region_wb": "Sub-Saharan Africa ",
+      "admin_region_wb": "Sub-Saharan Africa (excluding high income)",
+      "income_level_wb": "Lower middle income",
+      "lending_type_wb": "IDA",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 3482.53486037478,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/KM?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/KM/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/KM/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/KM/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/KM/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/KM/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/KM/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
       "code": "KR",
       "iso3": "KOR",
       "name_en": "Korea, Rep.",
@@ -3550,6 +3800,56 @@
       "source_name_es": "ISO-CLDR"
     },
     {
+      "code": "PF",
+      "iso3": "PYF",
+      "name_en": "French Polynesia",
+      "name_es": "French Polynesia",
+      "region_wb": "East Asia & Pacific",
+      "admin_region_wb": "",
+      "income_level_wb": "High income",
+      "lending_type_wb": "Not classified",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": null,
+          "year": null
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/PF?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/PF/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/PF/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/PF/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/PF/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/PF/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/PF/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
       "code": "PH",
       "iso3": "PHL",
       "name_en": "Philippines",
@@ -4180,6 +4480,56 @@
       "source_name_es": "ISO-CLDR"
     },
     {
+      "code": "SR",
+      "iso3": "SUR",
+      "name_en": "Suriname",
+      "name_es": "Suriname",
+      "region_wb": "Latin America & Caribbean ",
+      "admin_region_wb": "Latin America & Caribbean (excluding high income)",
+      "income_level_wb": "Upper middle income",
+      "lending_type_wb": "Blend",
+      "independence_year": null,
+      "source_independence": null,
+      "regime_series": [],
+      "resources": {
+        "oil_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "gas_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        },
+        "mineral_rents_pct_gdp": {
+          "value": null,
+          "year": null
+        }
+      },
+      "indicators": {
+        "gdp_pc_ppp": {
+          "value": 19179.1018321639,
+          "year": 2024
+        },
+        "gini": {
+          "value": null,
+          "year": null
+        },
+        "poverty_rate": {
+          "value": null,
+          "year": null
+        }
+      },
+      "sources": {
+        "meta": "https://api.worldbank.org/v2/country/SR?format=json",
+        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/SR/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=1",
+        "gini": "https://api.worldbank.org/v2/country/SR/indicator/SI.POV.GINI?format=json&per_page=1",
+        "poverty_rate": "https://api.worldbank.org/v2/country/SR/indicator/SI.POV.DDAY?format=json&per_page=1",
+        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/SR/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1",
+        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/SR/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=1",
+        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/SR/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=1"
+      }
+    },
+    {
       "code": "SV",
       "iso3": "SLV",
       "name_en": "El Salvador",
@@ -4656,66 +5006,6 @@
       "source_name_es": "ISO-CLDR"
     },
     {
-      "code": "US",
-      "iso3": "USA",
-      "name_en": "United States",
-      "name_es": "Estados Unidos",
-      "region_wb": "North America",
-      "admin_region_wb": "",
-      "income_level_wb": "High income",
-      "lending_type_wb": "Not classified",
-      "independence_year": 1776,
-      "source_independence": "UN-1945",
-      "regime_series": [
-        {
-          "year_start": 1776,
-          "year_end": 2024,
-          "regime_family": "democracy",
-          "score": 10,
-          "source": "Polity5/V-Dem (approximation)"
-        }
-      ],
-      "resources": {
-        "oil_rents_pct_gdp": {
-          "value": 0.61148265568772,
-          "year": 2021
-        },
-        "gas_rents_pct_gdp": {
-          "value": 0.363207721748918,
-          "year": 2021
-        },
-        "mineral_rents_pct_gdp": {
-          "value": 0.101999501227916,
-          "year": 2021
-        }
-      },
-      "indicators": {
-        "gdp_pc_ppp": {
-          "value": 75489.2664334817,
-          "year": 2024
-        },
-        "gini": {
-          "value": 41.8,
-          "year": 2023
-        },
-        "poverty_rate": {
-          "value": 1.2,
-          "year": 2023
-        }
-      },
-      "sources": {
-        "meta": "https://api.worldbank.org/v2/country/US?format=json",
-        "gdp_pc_ppp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=200",
-        "gini": "https://api.worldbank.org/v2/country/US/indicator/SI.POV.GINI?format=json&per_page=200",
-        "poverty_rate": "https://api.worldbank.org/v2/country/US/indicator/SI.POV.DDAY?format=json&per_page=200",
-        "oil_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=200",
-        "gas_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.NGAS.RT.ZS?format=json&per_page=200",
-        "mineral_rents_pct_gdp": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MINR.RT.ZS?format=json&per_page=200"
-      },
-      "continent_ui": "Norteamérica",
-      "source_name_es": "ISO-CLDR"
-    },
-    {
       "code": "UY",
       "iso3": "URY",
       "name_en": "Uruguay",
@@ -5044,6 +5334,6 @@
       "source_name_es": "ISO-CLDR"
     }
   ],
-  "retrieved_at": "2026-01-04T20:26:39.496962Z",
-  "source": "World Bank API (macro/resource indicators); meta from WB country endpoint; independence/regime not populated yet"
+  "retrieved_at": "2026-01-04T21:38:42.951335Z",
+  "source": "Merged: Manual data preserved + WB API for new codes"
 }

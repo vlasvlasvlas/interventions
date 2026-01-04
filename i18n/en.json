@@ -10,6 +10,7 @@
     },
     "tabs": {
         "timeline": "Timeline",
+        "map": "Map",
         "table": "Table"
     },
     "stats": {
@@ -22,6 +23,14 @@
         "title": "Timeline",
         "expand": "View details",
         "collapse": "Hide"
+    },
+    "map": {
+        "legendTitle": "Interventions by Country",
+        "legend": "Legend",
+        "interventions": "Interventions:",
+        "regime": "Regime:",
+        "resources": "Resources:",
+        "showRegimes": "Show regime"
     },
     "table": {
         "title": "Explore Data",
@@ -47,7 +56,9 @@
         "all": "All",
         "allCountries": "All countries",
         "allRegions": "All regions",
-        "yearRange": "Years:"
+        "yearRange": "Years:",
+        "country": "Country",
+        "clear": "Clear"
     },
     "openData": {
         "title": "Open Data",

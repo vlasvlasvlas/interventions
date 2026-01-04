@@ -213,27 +213,18 @@ function updateStats() {
 // ================================
 
 function initializeFilters() {
-    const decades = [...new Set(interventions.map(i => getDecade(i.year_start)))].sort().reverse();
-
-    // Timeline decade filter
-    const timelineDecade = document.getElementById('timelineDecade');
-    timelineDecade.innerHTML = `<option value="">${t('filters.all')} décadas</option>`;
-    decades.forEach(d => {
-        timelineDecade.innerHTML += `<option value="${d}">${d}</option>`;
-    });
-
-    // Continent/Region filter
-    const filterContinent = document.getElementById('filterContinent');
-    if (filterContinent) {
-        const continents = [...new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean))].sort();
-        filterContinent.innerHTML = `<option value="">${t('filters.allRegions') || 'Todas las regiones'}</option>`;
-        continents.forEach(c => {
-            filterContinent.innerHTML += `<option value="${c}">${c}</option>`;
+    // Region filter (unified)
+    const filterRegion = document.getElementById('filterRegion');
+    if (filterRegion) {
+        const regions = [...new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean))].sort();
+        filterRegion.innerHTML = `<option value="">${t('filters.allRegions') || 'Todas las regiones'}</option>`;
+        regions.forEach(r => {
+            filterRegion.innerHTML += `<option value="${r}">${r}</option>`;
         });
-        filterContinent.addEventListener('change', applyFilters);
+        filterRegion.addEventListener('change', applyFilters);
     }
 
-    // Country filter
+    // Country filter (unified)
     const filterCountry = document.getElementById('filterCountry');
     if (filterCountry) {
         const countries = [...new Set(interventions.map(i => i.country?.[currentLang] || i.country?.es).filter(Boolean))].sort();
@@ -243,29 +234,157 @@ function initializeFilters() {
         });
         filterCountry.addEventListener('change', applyFilters);
     }
+
+    // Year sliders (unified)
+    const yearStart = document.getElementById('yearStart');
+    const yearEnd = document.getElementById('yearEnd');
+    if (yearStart && yearEnd) {
+        yearStart.addEventListener('input', updateYearSliders);
+        yearEnd.addEventListener('input', updateYearSliders);
+        initDraggableSlider(); // Initialize drag logic
+        updateYearSliders(); // Initial visual update
+    }
+
+    // Clear filters button
+    const clearBtn = document.getElementById('clearFilters');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearFilters);
+    }
+}
+
+// Draggable Slider Logic
+function initDraggableSlider() {
+    const track = document.getElementById('sliderTrackActive');
+    const startInput = document.getElementById('yearStart');
+    const endInput = document.getElementById('yearEnd');
+    const container = document.getElementById('yearSliderContainer');
+
+    if (!track || !startInput || !endInput || !container) return;
+
+    let isDragging = false;
+    let startX, startVal, endVal, min, max, range;
+
+    function onMouseDown(e) {
+        if (e.target !== track) return;
+        isDragging = true;
+        startX = e.clientX || e.touches[0].clientX;
+        startVal = parseInt(startInput.value);
+        endVal = parseInt(endInput.value);
+        min = parseInt(startInput.min);
+        max = parseInt(startInput.max);
+        range = max - min;
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('touchmove', onMouseMove);
+        document.addEventListener('touchend', onMouseUp);
+        e.preventDefault();
+    }
+
+    function onMouseMove(e) {
+        if (!isDragging) return;
+
+        const currentX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+        const containerWidth = container.offsetWidth;
+        const movePx = currentX - startX;
+        const moveYears = Math.round((movePx / containerWidth) * range);
+
+        let newStart = startVal + moveYears;
+        let newEnd = endVal + moveYears;
+
+        // Boundaries check
+        if (newStart < min) {
+            newStart = min;
+            newEnd = min + (endVal - startVal);
+        }
+        if (newEnd > max) {
+            newEnd = max;
+            newStart = max - (endVal - startVal);
+        }
+
+        startInput.value = newStart;
+        endInput.value = newEnd;
+
+        updateYearSliders();
+        e.preventDefault();
+    }
+
+    function onMouseUp() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('touchmove', onMouseMove);
+        document.removeEventListener('touchend', onMouseUp);
+    }
+
+    track.addEventListener('mousedown', onMouseDown);
+    track.addEventListener('touchstart', onMouseDown);
+}
+
+function updateYearSliders() {
+    const yearStart = document.getElementById('yearStart');
+    const yearEnd = document.getElementById('yearEnd');
+    const startLabel = document.getElementById('yearStartLabel');
+    const endLabel = document.getElementById('yearEndLabel');
+
+    if (!yearStart || !yearEnd) return;
+
+    let startVal = parseInt(yearStart.value);
+    let endVal = parseInt(yearEnd.value);
+
+    // Ensure start <= end
+    if (startVal > endVal) {
+        yearStart.value = endVal;
+        startVal = endVal;
+    }
+
+    if (startLabel) startLabel.textContent = startVal;
+    if (endLabel) endLabel.textContent = endVal;
+
+    // Update active track visual
+    const track = document.getElementById('sliderTrackActive');
+    if (track) {
+        const min = parseInt(yearStart.min);
+        const max = parseInt(yearStart.max);
+        const range = max - min;
+
+        const leftPercent = ((startVal - min) / range) * 100;
+        const widthPercent = ((endVal - startVal) / range) * 100;
+
+        track.style.left = `${leftPercent}%`;
+        track.style.width = `${widthPercent}%`;
+    }
+
+    applyFilters();
+}
+
+function clearFilters() {
+    const yearStart = document.getElementById('yearStart');
+    const yearEnd = document.getElementById('yearEnd');
+    const filterRegion = document.getElementById('filterRegion');
+    const filterCountry = document.getElementById('filterCountry');
+    const globalSearch = document.getElementById('globalSearch');
+
+    if (yearStart) yearStart.value = 1775;
+    if (yearEnd) yearEnd.value = 2026;
+    if (filterRegion) filterRegion.value = '';
+    if (filterCountry) filterCountry.value = '';
+    if (globalSearch) globalSearch.value = '';
+
+    updateYearSliders();
 }
 
 function applyFilters() {
     const searchTerm = document.getElementById('globalSearch').value.toLowerCase().trim();
 
-    // Year filtering - timeline uses decade, table uses slider range
-    let yearStart = 1775;
-    let yearEnd = 2026;
-    let decade = '';
+    // Unified year range filter
+    const yearStartEl = document.getElementById('yearStart');
+    const yearEndEl = document.getElementById('yearEnd');
+    const yearStart = yearStartEl ? parseInt(yearStartEl.value) : 1775;
+    const yearEnd = yearEndEl ? parseInt(yearEndEl.value) : 2026;
 
-    if (currentTab === 'timeline') {
-        decade = document.getElementById('timelineDecade').value;
-    } else {
-        // Table uses year sliders
-        const yearStartEl = document.getElementById('yearStart');
-        const yearEndEl = document.getElementById('yearEnd');
-        if (yearStartEl && yearEndEl) {
-            yearStart = parseInt(yearStartEl.value);
-            yearEnd = parseInt(yearEndEl.value);
-        }
-    }
-
-    const continentFilter = document.getElementById('filterContinent')?.value || '';
+    // Unified region and country filters
+    const regionFilter = document.getElementById('filterRegion')?.value || '';
     const countryFilter = document.getElementById('filterCountry')?.value || '';
 
     filteredData = interventions.filter(item => {
@@ -273,6 +392,7 @@ function applyFilters() {
         if (searchTerm) {
             const country = (item.country?.[currentLang] || item.country?.es || '').toLowerCase();
             const desc = (item.description?.[currentLang] || item.description?.es || '').toLowerCase();
+            const continent = (item.continent?.[currentLang] || item.continent?.es || '').toLowerCase();
 
             // Check if search term is a year (4 digits)
             const searchYear = parseInt(searchTerm);
@@ -280,18 +400,14 @@ function applyFilters() {
 
             let matchesSearch = false;
 
-            // If searching for a year, check if it falls within the intervention's year range
             if (isYearSearch) {
                 matchesSearch = searchYear >= item.year_start && searchYear <= item.year_end;
             }
 
-            // Also check country, description, and continent
             if (!matchesSearch) {
-                const continent = (item.continent?.[currentLang] || item.continent?.es || '').toLowerCase();
                 matchesSearch = country.includes(searchTerm) || desc.includes(searchTerm) || continent.includes(searchTerm);
             }
 
-            // Also check exact year_start match for partial year searches
             if (!matchesSearch && !isYearSearch) {
                 matchesSearch = String(item.year_start).includes(searchTerm) || String(item.year_end).includes(searchTerm);
             }
@@ -301,23 +417,15 @@ function applyFilters() {
             }
         }
 
-        // Year filter - different for timeline vs table
-        if (currentTab === 'timeline') {
-            // Decade filter for timeline
-            if (decade && getDecade(item.year_start) !== decade) {
-                return false;
-            }
-        } else {
-            // Year range filter for table
-            if (item.year_end < yearStart || item.year_start > yearEnd) {
-                return false;
-            }
+        // Unified year range filter (applies to all tabs)
+        if (item.year_end < yearStart || item.year_start > yearEnd) {
+            return false;
         }
 
-        // Continent filter
-        if (continentFilter) {
-            const itemContinent = item.continent?.[currentLang] || item.continent?.es || '';
-            if (itemContinent !== continentFilter) {
+        // Region filter
+        if (regionFilter) {
+            const itemRegion = item.continent?.[currentLang] || item.continent?.es || '';
+            if (itemRegion !== regionFilter) {
                 return false;
             }
         }
@@ -335,6 +443,11 @@ function applyFilters() {
 
     currentPage = 1;
     render();
+
+    // Also update map if visible
+    if (currentTab === 'map' && typeof updateMapWithFilters === 'function') {
+        updateMapWithFilters(filteredData);
+    }
 }
 
 // ================================
@@ -582,6 +695,11 @@ function switchTab(tabName) {
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.toggle('active', content.id === `${tabName}Tab`);
     });
+
+    // Initialize map when first switching to map tab
+    if (tabName === 'map' && typeof initMap === 'function') {
+        initMap();
+    }
 
     render();
 }

@@ -503,6 +503,72 @@ body {
 }
 
 /* ================================
+   Unified Filters
+================================ */
+.unified-filters {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.filters-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--bg-card);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.btn-clear-filters {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-clear-filters:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .unified-filters {
+        position: relative;
+        top: 0;
+    }
+
+    .filters-row {
+        gap: var(--space-sm);
+    }
+
+    .filter-group {
+        flex: 1 1 calc(50% - var(--space-sm));
+        min-width: 140px;
+    }
+
+    .btn-clear-filters {
+        width: 100%;
+    }
+}
+
+/* ================================
    Data Table
 ================================ */
 .table-filters {
@@ -531,18 +597,54 @@ body {
 
 .year-slider-container {
     position: relative;
-    width: 150px;
+    width: 200px;
     height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* Background track */
+.slider-track-bg {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* Active range bar (draggable) */
+.slider-track-active {
+    position: absolute;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: grab;
+    pointer-events: auto;
+    /* Allow dragging */
+}
+
+.slider-track-active:active {
+    cursor: grabbing;
 }
 
 .year-slider {
     position: absolute;
     width: 100%;
-    height: 4px;
-    top: 10px;
-    background: transparent;
+    height: 24px;
+    /* Ensure thumb is clickable */
+    top: 0;
     pointer-events: none;
     -webkit-appearance: none;
+    background: transparent;
+    z-index: 2;
+    /* Thumbs above track */
+    margin: 0;
 }
 
 .year-slider::-webkit-slider-thumb {
@@ -555,6 +657,8 @@ body {
     pointer-events: all;
     border: 2px solid white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 3;
 }
 
 .year-slider::-moz-range-thumb {
@@ -565,12 +669,10 @@ body {
     cursor: pointer;
     pointer-events: all;
     border: 2px solid white;
+    position: relative;
+    z-index: 3;
 }
 
-.year-slider:first-child {
-    background: linear-gradient(to right, var(--border) 0%, var(--accent) 50%, var(--border) 100%);
-    border-radius: 2px;
-}
 
 .year-labels {
     display: flex;
@@ -592,6 +694,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.875rem;
+    table-layout: fixed;
 }
 
 .data-table th {
@@ -627,9 +730,12 @@ body {
 
 .table-country {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-sm);
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    min-width: 120px;
+    max-width: 180px;
 }
 
 .table-flag {
@@ -637,8 +743,9 @@ body {
 }
 
 .table-description {
-    max-width: 400px;
     line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .table-link {
@@ -1004,4 +1111,242 @@ body {
 
 .data-table tbody tr {
     animation: fadeInUp 0.3s ease forwards;
+}
+
+/* ================================
+   Interactive Map
+================================ */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px);
+    min-height: 500px;
+    background: var(--bg-secondary);
+}
+
+.leaflet-map {
+    width: 100%;
+    height: 100%;
+    background: #1a1a2e;
+}
+
+/* Leaflet dark theme overrides */
+.leaflet-container {
+    background: #1a1a2e;
+    font-family: var(--font-sans);
+}
+
+.leaflet-control-zoom {
+    border: none !important;
+}
+
+.leaflet-control-zoom a {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: var(--bg-hover) !important;
+}
+
+.leaflet-control-attribution {
+    background: rgba(26, 26, 26, 0.8) !important;
+    color: var(--text-muted) !important;
+    font-size: 10px;
+}
+
+.leaflet-control-attribution a {
+    color: var(--text-secondary) !important;
+}
+
+/* Map Legend */
+.map-legend {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.map-legend h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-divider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-sm) 0;
+}
+
+.legend-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.legend-toggle input {
+    accent-color: var(--accent);
+}
+
+/* Map Info Panel */
+.map-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.map-info h4 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.map-info .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xs) 0;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.map-info .info-row:last-child {
+    border-bottom: none;
+}
+
+.map-info .info-row span {
+    color: var(--text-secondary);
+}
+
+.map-info .info-row strong {
+    color: var(--text-primary);
+}
+
+/* Leaflet Popup Styles */
+.leaflet-popup-content-wrapper {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.leaflet-popup-content {
+    margin: var(--space-sm);
+    font-family: var(--font-sans);
+}
+
+.leaflet-popup-tip {
+    background: var(--bg-card);
+}
+
+.map-popup-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.map-popup-stat {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 2px 0;
+}
+
+.map-popup-stat strong {
+    color: var(--accent);
+}
+
+/* Regime border colors */
+.regime-democracy {
+    stroke: #10b981 !important;
+    stroke-width: 2 !important;
+}
+
+.regime-hybrid {
+    stroke: #fbbf24 !important;
+    stroke-width: 2 !important;
+}
+
+.regime-autocracy {
+    stroke: #ef4444 !important;
+    stroke-width: 2 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .map-container {
+        height: calc(100vh - 160px);
+        min-height: 400px;
+    }
+
+    .map-legend {
+        bottom: 10px;
+        left: 10px;
+        padding: var(--space-sm);
+        min-width: 120px;
+    }
+
+    .map-legend h4 {
+        font-size: 0.75rem;
+    }
+
+    .legend-item {
+        font-size: 0.625rem;
+    }
+
+    .map-info {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        left: auto;
+        max-width: 180px;
+        padding: var(--space-sm);
+    }
+
+    .map-info h4 {
+        font-size: 0.875rem;
+    }
+
+    .map-info .info-row {
+        font-size: 0.75rem;
+    }
 }
