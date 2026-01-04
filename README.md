@@ -8,6 +8,8 @@ Base de datos interactiva de intervenciones militares y políticas de Estados Un
 
 🔗 **Demo en vivo**: [https://vlasvlasvlas.github.io/interventions/](https://vlasvlasvlas.github.io/interventions/)
 
+![Screenshot](screenshot.png)
+
 ---
 
 ## 📚 Objetivo
