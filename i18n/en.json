@@ -1,0 +1,63 @@
+{
+    "title": "United States Foreign Interventions",
+    "subtitle": "Historical database of military and political operations (1775-2026)",
+    "search": "Search country, year or description...",
+    "about": {
+        "title": "📖 About this project",
+        "description": "This database compiles public information about US military and political interventions abroad from 1775 to present. Data comes from Wikipedia articles and other verifiable sources.",
+        "purpose": "Educational purpose: To facilitate understanding of the historical context of international relations. This project does not promote any political position; information is presented neutrally for educational purposes.",
+        "methodology": "Methodology: Data was extracted from Wikipedia (ES/EN) and structured in bilingual JSON format. Each record includes start/end year, country, description and link to original source for verification."
+    },
+    "tabs": {
+        "timeline": "Timeline",
+        "table": "Table"
+    },
+    "timeline": {
+        "title": "Timeline",
+        "expand": "View details",
+        "collapse": "Hide"
+    },
+    "table": {
+        "title": "Explore Data",
+        "yearStart": "Start",
+        "yearEnd": "End",
+        "country": "Country/Place",
+        "description": "Description",
+        "source": "Source",
+        "viewSource": "View source"
+    },
+    "pagination": {
+        "showing": "Showing",
+        "to": "to",
+        "of": "of",
+        "results": "results",
+        "prev": "Previous",
+        "next": "Next"
+    },
+    "filters": {
+        "decade": "Decade",
+        "region": "Region",
+        "all": "All"
+    },
+    "openData": {
+        "title": "Open Data",
+        "description": "Download the data in open format",
+        "downloadCSV": "Download CSV",
+        "downloadJSON": "Download JSON",
+        "license": "License: CC BY-SA 4.0 (Wikipedia data)"
+    },
+    "sources": {
+        "title": "Data Sources",
+        "wikiES": "Wikipedia ES: US Military Interventions",
+        "wikiEN": "Wikipedia EN: Timeline of US military operations",
+        "wikiLatam": "Wikipedia ES: US intervention in Latin American coups"
+    },
+    "footer": {
+        "disclaimer": "This is an informational tool based on public data. The information is presented for educational and historical reference purposes.",
+        "github": "View code on GitHub",
+        "objective": "📚 Educational purpose: understanding the historical context of international relations"
+    },
+    "noResults": "No results found",
+    "unspecified": "Region not specified",
+    "loading": "Loading data..."
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Base de datos histórica de intervenciones militares y políticas de Estados Unidos en el extranjero (1775-2026). Datos abiertos de Wikipedia.">
+    <title>Intervenciones de EEUU en el Extranjero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text" data-i18n="title">Intervenciones de EEUU</span>
+            </a>
+            <div class="header-actions">
+                <a href="https://github.com/vlasvlasvlas/interventions" target="_blank" rel="noopener"
+                    class="github-link" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a>
+                <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+                    <span class="lang-active">ES</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-inactive">EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title" data-i18n="title">Intervenciones de EEUU en el Extranjero</h1>
+            <p class="hero-subtitle" data-i18n="subtitle">Base de datos histórica de operaciones militares y políticas
+                (1775-2026)</p>
+
+            <div class="search-container">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="M21 21l-4.35-4.35" />
+                </svg>
+                <input type="text" id="globalSearch" class="search-input" data-i18n-placeholder="search"
+                    placeholder="Buscar país, año o descripción..." aria-label="Buscar">
+            </div>
+
+            <div class="stats" id="stats">
+                <div class="stat">
+                    <span class="stat-number" id="totalInterventions">0</span>
+                    <span class="stat-label">intervenciones</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="totalCountries">0</span>
+                    <span class="stat-label">países</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="totalYears">0</span>
+                    <span class="stat-label">años de datos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab active" data-tab="timeline" data-i18n="tabs.timeline">Timeline</button>
+                <button class="tab" data-tab="table" data-i18n="tabs.table">Tabla</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Timeline Tab -->
+        <section class="tab-content active" id="timelineTab">
+            <div class="container">
+                <div class="timeline-filters">
+                    <select id="timelineDecade" class="filter-select">
+                        <option value="">Todas las décadas</option>
+                    </select>
+                </div>
+                <div class="timeline" id="timeline">
+                    <!-- Timeline items rendered by JS -->
+                </div>
+                <div class="timeline-pagination" id="timelinePagination">
+                    <!-- Pagination rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Tab -->
+        <section class="tab-content" id="tableTab">
+            <div class="container">
+                <div class="table-filters">
+                    <select id="filterDecade" class="filter-select">
+                        <option value="" data-i18n="filters.all">Todas</option>
+                    </select>
+                    <select id="filterRegion" class="filter-select">
+                        <option value="" data-i18n="filters.all">Todas</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th data-i18n="table.yearStart">Inicio</th>
+                                <th data-i18n="table.yearEnd">Fin</th>
+                                <th data-i18n="table.country">País/Lugar</th>
+                                <th data-i18n="table.description">Descripción</th>
+                                <th data-i18n="table.source">Fuente</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Rows rendered by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="tablePagination">
+                    <!-- Pagination rendered by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 data-i18n="about.title">📖 Acerca de este proyecto</h2>
+            <div class="about-content">
+                <p data-i18n="about.description">
+                    Esta base de datos recopila información pública sobre intervenciones militares y políticas
+                    de Estados Unidos en el extranjero desde 1775 hasta la actualidad. Los datos provienen
+                    de artículos de Wikipedia y otras fuentes verificables.
+                </p>
+                <p data-i18n="about.purpose">
+                    <strong>Objetivo didáctico:</strong> Facilitar la comprensión del contexto histórico
+                    de las relaciones internacionales. Este proyecto no promueve ninguna posición política;
+                    la información se presenta de manera neutral con fines educativos.
+                </p>
+                <p data-i18n="about.methodology">
+                    <strong>Metodología:</strong> Los datos fueron extraídos de Wikipedia (ES/EN) y estructurados
+                    en formato JSON bilingüe. Cada registro incluye año de inicio/fin, país, descripción y
+                    enlace a la fuente original para verificación.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Data Section -->
+    <section class="open-data-section">
+        <div class="container">
+            <h2 data-i18n="openData.title">📂 Open Data</h2>
+            <p data-i18n="openData.description">Descargá los datos en formato abierto</p>
+            <div class="download-buttons">
+                <button class="download-btn" id="downloadCSV">
+                    <span>📄</span>
+                    <span data-i18n="openData.downloadCSV">Descargar CSV</span>
+                </button>
+                <button class="download-btn" id="downloadJSON">
+                    <span>📦</span>
+                    <span data-i18n="openData.downloadJSON">Descargar JSON</span>
+                </button>
+            </div>
+            <p class="license" data-i18n="openData.license">Licencia: CC BY-SA 4.0 (datos de Wikipedia)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 data-i18n="sources.title">Fuentes de Datos</h4>
+                    <ul class="sources-list">
+                        <li>
+                            <a href="https://es.wikipedia.org/wiki/Anexo:Intervenciones_militares_de_los_Estados_Unidos"
+                                target="_blank" rel="noopener">
+                                Wikipedia ES: Intervenciones militares de EEUU
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Timeline_of_United_States_military_operations"
+                                target="_blank" rel="noopener">
+                                Wikipedia EN: Timeline of US military operations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://es.wikipedia.org/wiki/Intervenci%C3%B3n_estadounidense_en_golpes_de_Estado_en_Am%C3%A9rica_Latina"
+                                target="_blank" rel="noopener">
+                                Wikipedia ES: Golpes de estado en América Latina
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Transparencia</h4>
+                    <p class="disclaimer" data-i18n="footer.disclaimer">
+                        Esta es una herramienta informativa basada en datos públicos.
+                        La información se presenta con fines educativos y de consulta histórica.
+                    </p>
+                    <a href="https://github.com/vlasvlasvlas/interventions" target="_blank" rel="noopener"
+                        class="github-footer-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        <span data-i18n="footer.github">Ver código en GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.objective">📚 Objetivo didáctico: comprender el contexto histórico de las
+                    relaciones internacionales</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

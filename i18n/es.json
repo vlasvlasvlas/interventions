@@ -1,0 +1,63 @@
+{
+  "title": "Intervenciones de EEUU en el Extranjero",
+  "subtitle": "Base de datos histórica de operaciones militares y políticas (1775-2026)",
+  "search": "Buscar país, año o descripción...",
+  "about": {
+    "title": "📖 Acerca de este proyecto",
+    "description": "Esta base de datos recopila información pública sobre intervenciones militares y políticas de Estados Unidos en el extranjero desde 1775 hasta la actualidad. Los datos provienen de artículos de Wikipedia y otras fuentes verificables.",
+    "purpose": "Objetivo didáctico: Facilitar la comprensión del contexto histórico de las relaciones internacionales. Este proyecto no promueve ninguna posición política; la información se presenta de manera neutral con fines educativos.",
+    "methodology": "Metodología: Los datos fueron extraídos de Wikipedia (ES/EN) y estructurados en formato JSON bilingüe. Cada registro incluye año de inicio/fin, país, descripción y enlace a la fuente original para verificación."
+  },
+  "tabs": {
+    "timeline": "Timeline",
+    "table": "Tabla"
+  },
+  "timeline": {
+    "title": "Línea de Tiempo",
+    "expand": "Ver detalles",
+    "collapse": "Ocultar"
+  },
+  "table": {
+    "title": "Explorar Datos",
+    "yearStart": "Inicio",
+    "yearEnd": "Fin",
+    "country": "País/Lugar",
+    "description": "Descripción",
+    "source": "Fuente",
+    "viewSource": "Ver fuente"
+  },
+  "pagination": {
+    "showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "results": "resultados",
+    "prev": "Anterior",
+    "next": "Siguiente"
+  },
+  "filters": {
+    "decade": "Década",
+    "region": "Región",
+    "all": "Todas"
+  },
+  "openData": {
+    "title": "Open Data",
+    "description": "Descargá los datos en formato abierto",
+    "downloadCSV": "Descargar CSV",
+    "downloadJSON": "Descargar JSON",
+    "license": "Licencia: CC BY-SA 4.0 (datos de Wikipedia)"
+  },
+  "sources": {
+    "title": "Fuentes de Datos",
+    "wikiES": "Wikipedia ES: Intervenciones militares de EEUU",
+    "wikiEN": "Wikipedia EN: Timeline of US military operations",
+    "wikiLatam": "Wikipedia ES: Intervención en golpes de estado en América Latina"
+  },
+  "footer": {
+    "disclaimer": "Esta es una herramienta informativa basada en datos públicos. La información se presenta con fines educativos y de consulta histórica.",
+    "github": "Ver código en GitHub",
+    "objective": "📚 Objetivo didáctico: comprender el contexto histórico de las relaciones internacionales"
+  },
+  "noResults": "No se encontraron resultados",
+  "unspecified": "Región no especificada",
+  "loading": "Cargando datos..."
+}
