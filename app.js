@@ -234,6 +234,17 @@ function initializeFilters() {
     sections.forEach(s => {
         filterRegion.innerHTML += `<option value="${s}">${s}</option>`;
     });
+
+    // Country filter
+    const filterCountry = document.getElementById('filterCountry');
+    if (filterCountry) {
+        const countries = [...new Set(interventions.map(i => i.country?.[currentLang] || i.country?.es).filter(Boolean))].sort();
+        filterCountry.innerHTML = `<option value="">${t('filters.allCountries') || 'Todos los países'}</option>`;
+        countries.forEach(c => {
+            filterCountry.innerHTML += `<option value="${c}">${c}</option>`;
+        });
+        filterCountry.addEventListener('change', applyFilters);
+    }
 }
 
 function applyFilters() {
@@ -242,6 +253,7 @@ function applyFilters() {
         ? document.getElementById('timelineDecade').value
         : document.getElementById('filterDecade').value;
     const section = document.getElementById('filterRegion').value;
+    const countryFilter = document.getElementById('filterCountry')?.value || '';
 
     filteredData = interventions.filter(item => {
         // Search filter
@@ -283,6 +295,14 @@ function applyFilters() {
         // Section/Region filter
         if (section && item.section !== section) {
             return false;
+        }
+
+        // Country filter
+        if (countryFilter) {
+            const itemCountry = item.country?.[currentLang] || item.country?.es || '';
+            if (itemCountry !== countryFilter) {
+                return false;
+            }
         }
 
         return true;

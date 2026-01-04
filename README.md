@@ -121,6 +121,17 @@ El sitio se despliega automáticamente en GitHub Pages desde la rama `main`.
 
 ---
 
+## 📋 Roadmap / TODO
+
+**V3 - Visualización Geográfica:**
+- [ ] 🗺️ Mapa choropleth interactivo de intervenciones
+- [ ] 🛢️ Capa de recursos naturales (petróleo, gas, minerales)
+- [ ] 📊 Correlación con indicadores económicos (NBI, PIB, Gini)
+- [ ] 🏛️ Datos geopolíticos (bases militares, votos ONU)
+- [ ] 📈 Gráficos de tendencias temporales
+
+---
+
 ## 📧 Contacto
 
 - **GitHub**: [@vlasvlasvlas](https://github.com/vlasvlasvlas)

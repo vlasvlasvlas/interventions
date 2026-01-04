@@ -42,7 +42,8 @@
   "filters": {
     "decade": "Década",
     "region": "Región",
-    "all": "Todas"
+    "all": "Todas",
+    "allCountries": "Todos los países"
   },
   "openData": {
     "title": "Open Data",
