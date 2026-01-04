@@ -1,0 +1,6 @@
+# Robots.txt for US Interventions
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vlasvlasvlas.github.io/interventions/sitemap.xml

@@ -820,3 +820,57 @@ body {
         height: 36px;
     }
 }
+
+/* ================================
+   Scroll to Top Button
+================================ */
+.scroll-top {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius-full);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-fast);
+    z-index: 99;
+}
+
+.scroll-top:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.scroll-top[hidden] {
+    display: none;
+}
+
+/* ================================
+   Animations
+================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.data-table tbody tr {
+    animation: fadeInUp 0.3s ease forwards;
+}

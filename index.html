@@ -4,28 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Essentials -->
+    <title>Intervenciones de EEUU en el Extranjero | Base de Datos Histórica</title>
     <meta name="description"
-        content="Base de datos histórica de intervenciones militares y políticas de Estados Unidos en el extranjero (1775-2026). Datos abiertos de Wikipedia.">
+        content="Base de datos interactiva de 318 intervenciones militares y políticas de Estados Unidos en el extranjero (1775-2026). Datos abiertos de Wikipedia con visualización timeline y tabla.">
+    <meta name="keywords"
+        content="intervenciones EEUU, Estados Unidos, militar, política exterior, historia, timeline, datos abiertos, Wikipedia">
+    <meta name="author" content="vlasvlasvlas">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlasvlasvlas.github.io/interventions/">
+
+    <!-- Hreflang for multilingual -->
+    <link rel="alternate" hreflang="es" href="https://vlasvlasvlas.github.io/interventions/">
+    <link rel="alternate" hreflang="en" href="https://vlasvlasvlas.github.io/interventions/">
+    <link rel="alternate" hreflang="x-default" href="https://vlasvlasvlas.github.io/interventions/">
+
+    <!-- Theme -->
     <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Intervenciones de EEUU en el Extranjero">
     <meta property="og:description"
-        content="Base de datos histórica de 318 intervenciones militares y políticas (1775-2026). Datos abiertos.">
+        content="Base de datos histórica de 318 intervenciones militares y políticas (1775-2026). Timeline interactivo y datos abiertos.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vlasvlasvlas.github.io/interventions/">
     <meta property="og:image" content="https://vlasvlasvlas.github.io/interventions/screenshot.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="US Interventions Database">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Intervenciones de EEUU en el Extranjero">
-    <meta name="twitter:description"
-        content="Base de datos histórica de 318 intervenciones militares y políticas (1775-2026).">
+    <meta name="twitter:description" content="318 intervenciones militares y políticas (1775-2026). Datos abiertos.">
+    <meta name="twitter:image" content="https://vlasvlasvlas.github.io/interventions/screenshot.png">
 
-    <title>Intervenciones de EEUU en el Extranjero</title>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Intervenciones de EEUU en el Extranjero",
+        "description": "Base de datos histórica de intervenciones militares y políticas de Estados Unidos en el extranjero desde 1775 hasta 2026",
+        "url": "https://vlasvlasvlas.github.io/interventions/",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "creator": {
+            "@type": "Person",
+            "name": "vlasvlasvlas",
+            "url": "https://github.com/vlasvlasvlas"
+        },
+        "dateModified": "2026-01-04",
+        "temporalCoverage": "1775/2026",
+        "spatialCoverage": "Global",
+        "distribution": [
+            {
+                "@type": "DataDownload",
+                "encodingFormat": "application/json",
+                "contentUrl": "https://vlasvlasvlas.github.io/interventions/data/interventions.json"
+            }
+        ],
+        "keywords": ["US interventions", "military history", "foreign policy", "open data"],
+        "inLanguage": ["es", "en"]
+    }
+    </script>
+
+    <!-- Favicon & PWA -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -250,6 +304,13 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
     <script src="app.js"></script>
     <script>
         // Register Service Worker for PWA
@@ -257,6 +318,15 @@
             navigator.serviceWorker.register('./sw.js')
                 .catch(err => console.log('SW registration failed:', err));
         }
+
+        // Scroll to top button
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollBtn.hidden = window.scrollY < 300;
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 
