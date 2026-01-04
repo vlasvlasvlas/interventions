@@ -734,6 +734,33 @@ body {
     white-space: nowrap;
 }
 
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+th.sortable:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.sort-icon {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+    width: 1em;
+    opacity: 0.5;
+}
+
+th.active-sort .sort-icon {
+    opacity: 1;
+}
+
+th.active-sort {
+    color: var(--text-primary);
+}
+
 .data-table td {
     padding: var(--space-md);
     border-bottom: 1px solid var(--border);

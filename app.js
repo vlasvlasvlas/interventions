@@ -14,6 +14,7 @@ let translations = {};
 let currentPage = 1;
 let currentTab = 'timeline';
 const ITEMS_PER_PAGE = 10;
+let currentSort = { column: 'year_start', direction: 'desc' };
 
 // Expose currentLang globally for charts.js
 window.currentLang = currentLang;
@@ -283,6 +284,9 @@ function initializeFilters() {
     if (clearBtn) {
         clearBtn.addEventListener('click', clearFilters);
     }
+
+    // Initialize Table Headers Sorting
+    initTableSorting();
 }
 
 // Draggable Slider Logic
@@ -481,6 +485,11 @@ function applyFilters() {
 
         return true;
     });
+
+    // Apply Table Sort
+    if (typeof sortFilteredData === 'function') {
+        sortFilteredData();
+    }
 
     currentPage = 1;
     render();
@@ -967,4 +976,84 @@ function hideAutosuggest() {
 function highlightMatch(text, term) {
     const regex = new RegExp(`(${term})`, 'gi');
     return text.replace(regex, '<strong style="color: var(--accent);">$1</strong>');
+}
+
+// ================================
+// Table Sorting
+// ================================
+
+function initTableSorting() {
+    const headers = document.querySelectorAll('th.sortable');
+    headers.forEach(th => {
+        th.addEventListener('click', () => {
+            const column = th.dataset.sort;
+            handleSort(column);
+        });
+    });
+}
+
+function handleSort(column) {
+    // Toggle direction if clicking same column
+    if (currentSort.column === column) {
+        currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSort.column = column;
+        currentSort.direction = 'asc'; // Default new sort to asc, or maybe desc for years?
+        // Let's stick to asc default, except maybe years? 
+        if (column === 'year_start' || column === 'year_end') {
+            currentSort.direction = 'desc';
+        }
+    }
+
+    // Update UI Icons
+    updateSortIcons();
+
+    // Re-sort data
+    sortFilteredData();
+
+    // Reset page and render
+    currentPage = 1;
+    render();
+}
+
+function updateSortIcons() {
+    document.querySelectorAll('th.sortable').forEach(th => {
+        const icon = th.querySelector('.sort-icon');
+        if (!icon) return;
+
+        if (th.dataset.sort === currentSort.column) {
+            icon.textContent = currentSort.direction === 'asc' ? '▲' : '▼'; // Up/Down arrows
+            th.classList.add('active-sort');
+        } else {
+            icon.textContent = '';
+            th.classList.remove('active-sort');
+        }
+    });
+}
+
+function sortFilteredData() {
+    filteredData.sort((a, b) => {
+        let valA, valB;
+
+        // Extract values based on column
+        if (currentSort.column === 'country') {
+            // Sort by localized country name
+            valA = (a.country?.[currentLang] || a.country?.es || '').toLowerCase();
+            valB = (b.country?.[currentLang] || b.country?.es || '').toLowerCase();
+        } else if (currentSort.column === 'description') {
+            valA = (a.description?.[currentLang] || a.description?.es || '').toLowerCase();
+            valB = (b.description?.[currentLang] || b.description?.es || '').toLowerCase();
+        } else if (currentSort.column === 'continent') {
+            valA = (a.continent?.[currentLang] || a.continent?.es || '').toLowerCase();
+            valB = (b.continent?.[currentLang] || b.continent?.es || '').toLowerCase();
+        } else {
+            // Default (years)
+            valA = a[currentSort.column];
+            valB = b[currentSort.column];
+        }
+
+        if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+        if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+        return 0;
+    });
 }
