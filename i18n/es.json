@@ -1,6 +1,10 @@
 {
   "title": "Intervenciones de EEUU en el Extranjero",
   "subtitle": "Base de datos histórica de operaciones militares y políticas (1775-2026)",
+  "hero": {
+    "badge": "📚 Herramienta para investigación periodística",
+    "cta": "👇 Explora por timeline, mapa interactivo, gráficos o tabla de datos"
+  },
   "search": "Ej: Cuba, 1980, África, golpe de estado...",
   "about": {
     "title": "📖 Acerca de este proyecto",
@@ -11,6 +15,7 @@
   "tabs": {
     "timeline": "Timeline",
     "map": "Mapa",
+    "charts": "Gráficos",
     "table": "Tabla"
   },
   "stats": {
@@ -30,7 +35,26 @@
     "interventions": "Intervenciones:",
     "regime": "Régimen:",
     "resources": "Recursos:",
-    "showRegimes": "Mostrar régimen"
+    "showRegimes": "Mostrar régimen",
+    "viewMode": "Visualización",
+    "modeInterventions": "Intervenciones",
+    "modeOil": "Petróleo (%)",
+    "modeGas": "Gas (%)",
+    "modeMineral": "Minerales (%)"
+  },
+  "charts": {
+    "intro": "Análisis visual de patrones históricos en las intervenciones de Estados Unidos. Los gráficos responden a los filtros activos.",
+    "timelineTitle": "📊 Evolución Histórica",
+    "timelineSubtitle": "Intervenciones por década",
+    "topCountriesTitle": "🎯 Países Más Afectados",
+    "topCountriesSubtitle": "Top 10 por número de intervenciones",
+    "regionsTitle": "🌎 Distribución Geográfica",
+    "regionsSubtitle": "Porcentaje por región del mundo",
+    "durationTitle": "⏱️ Duración de Operaciones",
+    "durationSubtitle": "¿Cuánto duran las intervenciones?",
+    "note": "💡 Nota: Usa los filtros de año, región o búsqueda para analizar períodos específicos.",
+    "topCountries": "Top 10 Países",
+    "byRegion": "Por Región"
   },
   "table": {
     "title": "Explorar Datos",

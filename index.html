@@ -90,6 +90,9 @@
     <!-- Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -120,6 +123,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
+            <div class="hero-badge" data-i18n="hero.badge">📚 Herramienta para investigación periodística</div>
             <h1 class="hero-title" data-i18n="title">Intervenciones de EEUU en el Extranjero</h1>
             <p class="hero-subtitle" data-i18n="subtitle">Base de datos histórica de operaciones militares y políticas
                 (1775-2026)</p>
@@ -153,6 +157,9 @@
                     <span class="stat-label" data-i18n="stats.years">años de datos</span>
                 </div>
             </div>
+
+            <p class="hero-cta" data-i18n="hero.cta">👇 Explora por timeline, mapa interactivo, gráficos o tabla de
+                datos</p>
         </div>
     </section>
 
@@ -162,6 +169,7 @@
             <div class="tabs">
                 <button class="tab active" data-tab="timeline" data-i18n="tabs.timeline">Timeline</button>
                 <button class="tab" data-tab="map" data-i18n="tabs.map">Mapa</button>
+                <button class="tab" data-tab="charts" data-i18n="tabs.charts">Gráficos</button>
                 <button class="tab" data-tab="table" data-i18n="tabs.table">Tabla</button>
             </div>
         </div>
@@ -228,24 +236,24 @@
             <div class="map-container">
                 <div id="interventionsMap" class="leaflet-map"></div>
 
+                <div class="map-controls-overlay">
+                    <h4 data-i18n="map.viewMode" style="margin-bottom:0.5rem;font-size:0.875rem;opacity:0.8">
+                        Visualización</h4>
+                    <label class="map-mode-label"><input type="radio" name="mapMode" value="interventions" checked>
+                        <span data-i18n="map.modeInterventions">Intervenciones</span></label>
+                    <label class="map-mode-label"><input type="radio" name="mapMode" value="oil_rents_pct_gdp"> <span
+                            data-i18n="map.modeOil">Petróleo (%)</span></label>
+                    <label class="map-mode-label"><input type="radio" name="mapMode" value="gas_rents_pct_gdp"> <span
+                            data-i18n="map.modeGas">Gas (%)</span></label>
+                    <label class="map-mode-label"><input type="radio" name="mapMode" value="mineral_rents_pct_gdp">
+                        <span data-i18n="map.modeMineral">Minerales (%)</span></label>
+                </div>
+
                 <!-- Map Legend -->
                 <div class="map-legend" id="mapLegend">
-                    <h4 data-i18n="map.legendTitle">Intervenciones p/ País</h4>
-                    <div class="legend-item">
-                        <span class="legend-color" style="background: #374151;"></span>
-                        <span>0</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-color" style="background: #fbbf24;"></span>
-                        <span>1-3</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-color" style="background: #f97316;"></span>
-                        <span>4-10</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-color" style="background: #dc2626;"></span>
-                        <span>10+</span>
+                    <h4 id="legendTitle" data-i18n="map.legendTitle">Intervenciones p/ País</h4>
+                    <div id="legendScale" class="legend-scale">
+                        <!-- Scale Items Rendered by JS -->
                     </div>
                     <div class="legend-divider"></div>
                     <label class="legend-toggle">
@@ -269,6 +277,31 @@
                         <span data-i18n="map.resources">Recursos:</span>
                         <strong id="mapInfoResources">-</strong>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Tab -->
+        <section class="tab-content" id="chartsTab">
+            <div class="container">
+                <!-- Charts Intro -->
+                <div class="charts-intro">
+                    <p class="charts-intro-text" data-i18n="charts.intro">
+                        Análisis visual de patrones históricos en las intervenciones de Estados Unidos.
+                        Los gráficos responden a los filtros activos.
+                    </p>
+                </div>
+
+                <!-- Charts Grid - Dynamic Content -->
+                <div class="charts-grid" id="chartsGrid">
+                    <!-- Cards will be generated by JS based on charts_config.json -->
+                </div>
+
+                <!-- Data Note -->
+                <div class="charts-note">
+                    <p data-i18n="charts.note">
+                        💡 Nota: Usa los filtros de año, región o búsqueda para analizar períodos específicos.
+                    </p>
                 </div>
             </div>
         </section>
@@ -409,6 +442,7 @@
     </button>
 
     <script src="map.js"></script>
+    <script src="charts.js"></script>
     <script src="app.js"></script>
     <script>
         // Register Service Worker for PWA

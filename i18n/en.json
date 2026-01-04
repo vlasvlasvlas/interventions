@@ -1,6 +1,10 @@
 {
     "title": "United States Foreign Interventions",
     "subtitle": "Historical database of military and political operations (1775-2026)",
+    "hero": {
+        "badge": "📚 Tool for investigative journalism",
+        "cta": "👇 Explore by timeline, interactive map, charts, or data table"
+    },
     "search": "E.g.: Cuba, 1980, Africa, coup...",
     "about": {
         "title": "📖 About this project",
@@ -11,6 +15,7 @@
     "tabs": {
         "timeline": "Timeline",
         "map": "Map",
+        "charts": "Charts",
         "table": "Table"
     },
     "stats": {
@@ -30,7 +35,26 @@
         "interventions": "Interventions:",
         "regime": "Regime:",
         "resources": "Resources:",
-        "showRegimes": "Show regime"
+        "showRegimes": "Show regime",
+        "viewMode": "View Mode",
+        "modeInterventions": "Interventions",
+        "modeOil": "Oil (%)",
+        "modeGas": "Gas (%)",
+        "modeMineral": "Minerals (%)"
+    },
+    "charts": {
+        "intro": "Visual analysis of historical patterns in United States interventions. Charts respond to active filters.",
+        "timelineTitle": "📊 Historical Evolution",
+        "timelineSubtitle": "Interventions by decade",
+        "topCountriesTitle": "🎯 Most Affected Countries",
+        "topCountriesSubtitle": "Top 10 by number of interventions",
+        "regionsTitle": "🌎 Geographic Distribution",
+        "regionsSubtitle": "Percentage by world region",
+        "durationTitle": "⏱️ Operation Duration",
+        "durationSubtitle": "How long do interventions last?",
+        "note": "💡 Note: Use year, region, or search filters to analyze specific periods.",
+        "topCountries": "Top 10 Countries",
+        "byRegion": "By Region"
     },
     "table": {
         "title": "Explore Data",

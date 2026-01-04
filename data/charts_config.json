@@ -1,0 +1,154 @@
+[
+    {
+        "id": "chartTimeline",
+        "type": "bar",
+        "title": {
+            "es": "📊 Evolución Histórica",
+            "en": "📊 Historical Evolution"
+        },
+        "subtitle": {
+            "es": "Intervenciones por década",
+            "en": "Interventions by decade"
+        },
+        "groupBy": "year_start",
+        "bucketSize": 10,
+        "style": {
+            "colorType": "intensity",
+            "baseColor": "rgba(239, 68, 68, 1)"
+        }
+    },
+    {
+        "id": "chartResources",
+        "type": "doughnut",
+        "title": {
+            "es": "🛢️ Intervenciones y Petróleo",
+            "en": "🛢️ Interventions & Oil"
+        },
+        "subtitle": {
+            "es": "Distribución según riqueza petrolera del país objetivo",
+            "en": "Distribution by target country oil wealth"
+        },
+        "groupBy": "resource_oil",
+        "style": {
+            "colorType": "palette",
+            "palette": "resources"
+        }
+    },
+    {
+        "id": "chartCountries",
+        "type": "bar",
+        "title": {
+            "es": "🎯 Países Más Afectados",
+            "en": "🎯 Most Affected Countries"
+        },
+        "subtitle": {
+            "es": "Top 10 por número de intervenciones",
+            "en": "Top 10 by number of interventions"
+        },
+        "groupBy": "country",
+        "limit": 10,
+        "exclude": [
+            "Guerra",
+            "War",
+            "Revolución",
+            "Revolution",
+            "Operación",
+            "Operation"
+        ],
+        "orientation": "horizontal",
+        "style": {
+            "colorType": "gradient",
+            "baseColor": "blue"
+        }
+    },
+    {
+        "id": "chartRegions",
+        "type": "doughnut",
+        "title": {
+            "es": "🌎 Distribución Geográfica",
+            "en": "🌎 Geographic Distribution"
+        },
+        "subtitle": {
+            "es": "Porcentaje por región del mundo",
+            "en": "Percentage by world region"
+        },
+        "groupBy": "region",
+        "style": {
+            "colorType": "palette",
+            "palette": "regions"
+        }
+    },
+    {
+        "id": "chartDuration",
+        "type": "bar",
+        "title": {
+            "es": "⏱️ Duración de Operaciones",
+            "en": "⏱️ Operation Duration"
+        },
+        "subtitle": {
+            "es": "¿Cuánto duran las intervenciones?",
+            "en": "How long do interventions last?"
+        },
+        "groupBy": "duration",
+        "buckets": [
+            {
+                "max": 1,
+                "label": {
+                    "es": "< 1 año",
+                    "en": "< 1 year"
+                }
+            },
+            {
+                "max": 2,
+                "label": {
+                    "es": "1-2 años",
+                    "en": "1-2 years"
+                }
+            },
+            {
+                "max": 5,
+                "label": {
+                    "es": "3-5 años",
+                    "en": "3-5 years"
+                }
+            },
+            {
+                "max": 10,
+                "label": {
+                    "es": "6-10 años",
+                    "en": "6-10 years"
+                }
+            },
+            {
+                "max": 999,
+                "label": {
+                    "es": "10+ años",
+                    "en": "10+ years"
+                }
+            }
+        ],
+        "style": {
+            "colorType": "palette",
+            "palette": "duration"
+        }
+    },
+    {
+        "id": "chartOilTimeline",
+        "type": "bar",
+        "title": {
+            "es": "🛢️ Evolución Petrolera",
+            "en": "🛢️ Oil Evolution"
+        },
+        "subtitle": {
+            "es": "Intervenciones por década según riqueza petrolera",
+            "en": "Interventions by decade broken down by oil wealth"
+        },
+        "groupBy": "year_start",
+        "bucketSize": 10,
+        "stackBy": "resource_oil",
+        "style": {
+            "colorType": "palette",
+            "palette": "resources"
+        }
+    }
+]

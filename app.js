@@ -8,11 +8,15 @@
 // ================================
 let interventions = [];
 let filteredData = [];
+let countriesData = {}; // ISO code -> country data from countries.json
 let currentLang = 'es';
 let translations = {};
 let currentPage = 1;
 let currentTab = 'timeline';
 const ITEMS_PER_PAGE = 10;
+
+// Expose currentLang globally for charts.js
+window.currentLang = currentLang;
 
 // ================================
 // Country ISO Codes Mapping
@@ -170,11 +174,25 @@ async function loadTranslations(lang) {
 
 async function loadData() {
     try {
-        const response = await fetch('data/interventions.json');
-        if (!response.ok) throw new Error('Failed');
+        // Load both data files
+        const [intResponse, countryResponse] = await Promise.all([
+            fetch('data/interventions.json'),
+            fetch('data/countries.json')
+        ]);
 
-        const data = await response.json();
-        interventions = data.interventions || [];
+        if (!intResponse.ok) throw new Error('Failed to load interventions');
+
+        const intData = await intResponse.json();
+        interventions = intData.interventions || [];
+
+        // Load countries data for proper country names
+        if (countryResponse.ok) {
+            const countryData = await countryResponse.json();
+            (countryData.countries || []).forEach(c => {
+                countriesData[c.code] = c;
+            });
+        }
+
         filteredData = [...interventions];
 
         // Sort by year descending (newest first)
@@ -224,13 +242,28 @@ function initializeFilters() {
         filterRegion.addEventListener('change', applyFilters);
     }
 
-    // Country filter (unified)
+    // Country filter - use countries.json for proper names
     const filterCountry = document.getElementById('filterCountry');
     if (filterCountry) {
-        const countries = [...new Set(interventions.map(i => i.country?.[currentLang] || i.country?.es).filter(Boolean))].sort();
+        // Get unique country codes from interventions that have valid codes
+        const countryCodes = [...new Set(
+            interventions
+                .map(i => i.country?.code)
+                .filter(code => code && countriesData[code])
+        )];
+
+        // Build list of countries with proper names
+        const countries = countryCodes.map(code => {
+            const c = countriesData[code];
+            return {
+                code: code,
+                name: currentLang === 'en' ? c.name_en : c.name_es
+            };
+        }).sort((a, b) => a.name.localeCompare(b.name));
+
         filterCountry.innerHTML = `<option value="">${t('filters.allCountries') || 'Todos los países'}</option>`;
         countries.forEach(c => {
-            filterCountry.innerHTML += `<option value="${c}">${c}</option>`;
+            filterCountry.innerHTML += `<option value="${c.code}">${c.name}</option>`;
         });
         filterCountry.addEventListener('change', applyFilters);
     }
@@ -390,9 +423,16 @@ function applyFilters() {
     filteredData = interventions.filter(item => {
         // Search filter
         if (searchTerm) {
-            const country = (item.country?.[currentLang] || item.country?.es || '').toLowerCase();
+            const eventName = (item.country?.[currentLang] || item.country?.es || '').toLowerCase();
             const desc = (item.description?.[currentLang] || item.description?.es || '').toLowerCase();
             const continent = (item.continent?.[currentLang] || item.continent?.es || '').toLowerCase();
+
+            // Get real country name from countriesData if available
+            const countryCode = item.country?.code;
+            const countryData = countryCode ? countriesData[countryCode] : null;
+            const realCountryName = countryData
+                ? (currentLang === 'en' ? countryData.name_en : countryData.name_es).toLowerCase()
+                : '';
 
             // Check if search term is a year (4 digits)
             const searchYear = parseInt(searchTerm);
@@ -405,7 +445,8 @@ function applyFilters() {
             }
 
             if (!matchesSearch) {
-                matchesSearch = country.includes(searchTerm) || desc.includes(searchTerm) || continent.includes(searchTerm);
+                matchesSearch = eventName.includes(searchTerm) || desc.includes(searchTerm) ||
+                    continent.includes(searchTerm) || realCountryName.includes(searchTerm);
             }
 
             if (!matchesSearch && !isYearSearch) {
@@ -430,10 +471,10 @@ function applyFilters() {
             }
         }
 
-        // Country filter
+        // Country filter - now filters by country code
         if (countryFilter) {
-            const itemCountry = item.country?.[currentLang] || item.country?.es || '';
-            if (itemCountry !== countryFilter) {
+            const itemCountryCode = item.country?.code || '';
+            if (itemCountryCode !== countryFilter) {
                 return false;
             }
         }
@@ -446,7 +487,13 @@ function applyFilters() {
 
     // Also update map if visible
     if (currentTab === 'map' && typeof updateMapWithFilters === 'function') {
-        updateMapWithFilters(filteredData);
+        const mode = document.querySelector('input[name="mapMode"]:checked')?.value || 'interventions';
+        updateMapWithFilters(filteredData, mode);
+    }
+
+    // Update charts if visible
+    if (currentTab === 'charts' && typeof updateCharts === 'function') {
+        updateCharts(filteredData, currentLang);
     }
 }
 
@@ -660,10 +707,16 @@ async function updateLanguage() {
     initializeFilters();
     updateStats();
     render();
+
+    // Update charts if initialized (to reflect language change)
+    if (window.chartsInitialized && typeof updateCharts === 'function') {
+        updateCharts(filteredData, currentLang);
+    }
 }
 
 function toggleLanguage() {
     currentLang = currentLang === 'es' ? 'en' : 'es';
+    window.currentLang = currentLang; // Update global reference
 
     const toggle = document.getElementById('langToggle');
     const spans = toggle.querySelectorAll('span:not(.lang-separator)');
@@ -697,8 +750,24 @@ function switchTab(tabName) {
     });
 
     // Initialize map when first switching to map tab
-    if (tabName === 'map' && typeof initMap === 'function') {
-        initMap();
+    if (tabName === 'map' && typeof window.initMap === 'function') {
+        const initPromise = window.initMap();
+        if (initPromise instanceof Promise) {
+            initPromise.then(() => applyFilters());
+        } else {
+            // Fallback for sync init (unlikely)
+            setTimeout(() => applyFilters(), 50);
+        }
+    }
+
+    // Initialize charts when first switching to charts tab
+    if (tabName === 'charts' && typeof initCharts === 'function') {
+        // Build chart if canvas empty (checking if global var is null logic is inside chart.js actually or we rely on check)
+        if (!window.chartsInitialized) {
+            initCharts();
+            window.chartsInitialized = true;
+        }
+        setTimeout(() => updateCharts(filteredData, currentLang), 100);
     }
 
     render();
@@ -796,8 +865,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Timeline decade filter
-    document.getElementById('timelineDecade').addEventListener('change', applyFilters);
+    // Timeline functionality initialized through renderTimeline
+
 
     // Year range sliders for table
     const yearStartSlider = document.getElementById('yearStart');
