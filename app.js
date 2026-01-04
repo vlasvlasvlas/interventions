@@ -197,12 +197,14 @@ async function loadData() {
 
 function updateStats() {
     const countries = new Set(interventions.map(i => i.country?.[currentLang] || i.country?.es));
+    const continents = new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean));
     const years = interventions.length > 0
         ? Math.max(...interventions.map(i => i.year_end)) - Math.min(...interventions.map(i => i.year_start))
         : 0;
 
     document.getElementById('totalInterventions').textContent = interventions.length;
     document.getElementById('totalCountries').textContent = countries.size;
+    document.getElementById('totalContinents').textContent = continents.size;
     document.getElementById('totalYears').textContent = years;
 }
 
@@ -212,7 +214,6 @@ function updateStats() {
 
 function initializeFilters() {
     const decades = [...new Set(interventions.map(i => getDecade(i.year_start)))].sort().reverse();
-    const sections = [...new Set(interventions.map(i => i.section).filter(Boolean))].sort();
 
     // Timeline decade filter
     const timelineDecade = document.getElementById('timelineDecade');
@@ -221,20 +222,11 @@ function initializeFilters() {
         timelineDecade.innerHTML += `<option value="${d}">${d}</option>`;
     });
 
-    // Table filters
-    const filterDecade = document.getElementById('filterDecade');
-    const filterRegion = document.getElementById('filterRegion');
-
-    filterDecade.innerHTML = `<option value="">${t('filters.all')}</option>`;
-    decades.forEach(d => {
-        filterDecade.innerHTML += `<option value="${d}">${d}</option>`;
-    });
-
-    // Continent filter
+    // Continent/Region filter
     const filterContinent = document.getElementById('filterContinent');
     if (filterContinent) {
         const continents = [...new Set(interventions.map(i => i.continent?.[currentLang] || i.continent?.es).filter(Boolean))].sort();
-        filterContinent.innerHTML = `<option value="">${t('filters.allContinents') || 'Todos los continentes'}</option>`;
+        filterContinent.innerHTML = `<option value="">${t('filters.allRegions') || 'Todas las regiones'}</option>`;
         continents.forEach(c => {
             filterContinent.innerHTML += `<option value="${c}">${c}</option>`;
         });
@@ -255,9 +247,24 @@ function initializeFilters() {
 
 function applyFilters() {
     const searchTerm = document.getElementById('globalSearch').value.toLowerCase().trim();
-    const decade = currentTab === 'timeline'
-        ? document.getElementById('timelineDecade').value
-        : document.getElementById('filterDecade').value;
+
+    // Year filtering - timeline uses decade, table uses slider range
+    let yearStart = 1775;
+    let yearEnd = 2026;
+    let decade = '';
+
+    if (currentTab === 'timeline') {
+        decade = document.getElementById('timelineDecade').value;
+    } else {
+        // Table uses year sliders
+        const yearStartEl = document.getElementById('yearStart');
+        const yearEndEl = document.getElementById('yearEnd');
+        if (yearStartEl && yearEndEl) {
+            yearStart = parseInt(yearStartEl.value);
+            yearEnd = parseInt(yearEndEl.value);
+        }
+    }
+
     const continentFilter = document.getElementById('filterContinent')?.value || '';
     const countryFilter = document.getElementById('filterCountry')?.value || '';
 
@@ -294,9 +301,17 @@ function applyFilters() {
             }
         }
 
-        // Decade filter
-        if (decade && getDecade(item.year_start) !== decade) {
-            return false;
+        // Year filter - different for timeline vs table
+        if (currentTab === 'timeline') {
+            // Decade filter for timeline
+            if (decade && getDecade(item.year_start) !== decade) {
+                return false;
+            }
+        } else {
+            // Year range filter for table
+            if (item.year_end < yearStart || item.year_start > yearEnd) {
+                return false;
+            }
         }
 
         // Continent filter
@@ -666,8 +681,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Timeline decade filter
     document.getElementById('timelineDecade').addEventListener('change', applyFilters);
 
-    // Table filters
-    document.getElementById('filterDecade').addEventListener('change', applyFilters);
+    // Year range sliders for table
+    const yearStartSlider = document.getElementById('yearStart');
+    const yearEndSlider = document.getElementById('yearEnd');
+    const yearStartLabel = document.getElementById('yearStartLabel');
+    const yearEndLabel = document.getElementById('yearEndLabel');
+
+    function updateYearSliders() {
+        let startVal = parseInt(yearStartSlider.value);
+        let endVal = parseInt(yearEndSlider.value);
+
+        // Ensure start <= end
+        if (startVal > endVal) {
+            if (this === yearStartSlider) {
+                yearEndSlider.value = startVal;
+                endVal = startVal;
+            } else {
+                yearStartSlider.value = endVal;
+                startVal = endVal;
+            }
+        }
+
+        yearStartLabel.textContent = startVal;
+        yearEndLabel.textContent = endVal;
+        applyFilters();
+    }
+
+    yearStartSlider.addEventListener('input', updateYearSliders);
+    yearEndSlider.addEventListener('input', updateYearSliders);
 
     // Download buttons
     document.getElementById('downloadCSV').addEventListener('click', downloadCSV);

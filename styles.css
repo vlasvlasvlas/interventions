@@ -507,6 +507,78 @@ body {
 ================================ */
 .table-filters {
     margin-bottom: var(--space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+/* Year Range Slider */
+.year-range-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--bg-card);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.filter-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.year-slider-container {
+    position: relative;
+    width: 150px;
+    height: 24px;
+}
+
+.year-slider {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 10px;
+    background: transparent;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+
+.year-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    pointer-events: all;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.year-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    pointer-events: all;
+    border: 2px solid white;
+}
+
+.year-slider:first-child {
+    background: linear-gradient(to right, var(--border) 0%, var(--accent) 50%, var(--border) 100%);
+    border-radius: 2px;
+}
+
+.year-labels {
+    display: flex;
+    gap: var(--space-xs);
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    min-width: 100px;
 }
 
 .table-container {

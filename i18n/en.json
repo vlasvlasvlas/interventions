@@ -1,7 +1,7 @@
 {
     "title": "United States Foreign Interventions",
     "subtitle": "Historical database of military and political operations (1775-2026)",
-    "search": "Search country, year or description...",
+    "search": "E.g.: Cuba, 1980, Africa, coup...",
     "about": {
         "title": "📖 About this project",
         "description": "This database compiles public information about US military and political interventions abroad from 1775 to present. Data comes from Wikipedia articles and other verifiable sources.",
@@ -15,6 +15,7 @@
     "stats": {
         "interventions": "interventions",
         "countries": "countries",
+        "continents": "regions",
         "years": "years of data"
     },
     "timeline": {
@@ -45,7 +46,8 @@
         "region": "Region",
         "all": "All",
         "allCountries": "All countries",
-        "allContinents": "All continents"
+        "allRegions": "All regions",
+        "yearRange": "Years:"
     },
     "openData": {
         "title": "Open Data",

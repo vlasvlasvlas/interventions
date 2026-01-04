@@ -1,7 +1,7 @@
 {
   "title": "Intervenciones de EEUU en el Extranjero",
   "subtitle": "Base de datos histórica de operaciones militares y políticas (1775-2026)",
-  "search": "Buscar país, año o descripción...",
+  "search": "Ej: Cuba, 1980, África, golpe de estado...",
   "about": {
     "title": "📖 Acerca de este proyecto",
     "description": "Esta base de datos recopila información pública sobre intervenciones militares y políticas de Estados Unidos en el extranjero desde 1775 hasta la actualidad. Los datos provienen de artículos de Wikipedia y otras fuentes verificables.",
@@ -15,6 +15,7 @@
   "stats": {
     "interventions": "intervenciones",
     "countries": "países",
+    "continents": "regiones",
     "years": "años de datos"
   },
   "timeline": {
@@ -45,7 +46,8 @@
     "region": "Región",
     "all": "Todas",
     "allCountries": "Todos los países",
-    "allContinents": "Todos los continentes"
+    "allRegions": "Todas las regiones",
+    "yearRange": "Años:"
   },
   "openData": {
     "title": "Open Data",

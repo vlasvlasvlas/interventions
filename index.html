@@ -141,6 +141,10 @@
                     <span class="stat-label" data-i18n="stats.countries">países</span>
                 </div>
                 <div class="stat">
+                    <span class="stat-number" id="totalContinents">0</span>
+                    <span class="stat-label" data-i18n="stats.continents">regiones</span>
+                </div>
+                <div class="stat">
                     <span class="stat-number" id="totalYears">0</span>
                     <span class="stat-label" data-i18n="stats.years">años de datos</span>
                 </div>
@@ -181,11 +185,20 @@
         <section class="tab-content" id="tableTab">
             <div class="container">
                 <div class="table-filters">
-                    <select id="filterDecade" class="filter-select">
-                        <option value="" data-i18n="filters.all">Todas</option>
-                    </select>
+                    <div class="year-range-filter">
+                        <label class="filter-label" data-i18n="filters.yearRange">Años:</label>
+                        <div class="year-slider-container">
+                            <input type="range" id="yearStart" min="1775" max="2026" value="1775" class="year-slider">
+                            <input type="range" id="yearEnd" min="1775" max="2026" value="2026" class="year-slider">
+                        </div>
+                        <div class="year-labels">
+                            <span id="yearStartLabel">1775</span>
+                            <span>-</span>
+                            <span id="yearEndLabel">2026</span>
+                        </div>
+                    </div>
                     <select id="filterContinent" class="filter-select">
-                        <option value="" data-i18n="filters.allContinents">Todos los continentes</option>
+                        <option value="" data-i18n="filters.allRegions">Todas las regiones</option>
                     </select>
                     <select id="filterCountry" class="filter-select">
                         <option value="" data-i18n="filters.allCountries">Todos los países</option>
@@ -333,6 +346,9 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+
+    <!-- GoatCounter Analytics -->
+    <script data-goatcounter="https://interventions.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
